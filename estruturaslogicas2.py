@@ -10,7 +10,7 @@ operadores binários:
 
 Para o end ser verdadeiro ambos as declaracoes precisam ser verdadeiras. Caso contrario sera falso.
 Para o or ser verdadeiro, ou uma ou outra declaracao deve ser verdadeira. Caso contrario sera falso.
-Para o not, o boleano e invertido
+Para o not, o boolean e invertido
 """
 
 ativo = False

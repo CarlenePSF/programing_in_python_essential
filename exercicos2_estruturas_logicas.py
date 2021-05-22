@@ -885,11 +885,31 @@ if mes in teste:
                 print('data invalida')
 else:
     print('Data invalida')
-"""
+
 #-------------------------------------------------------
 # Exercicio 36 - Calculando comissao de vendas
-#-------------------------------------------------------
+#------------------------------------------------------
+valor = float(input("Qual foi o  valor da venda:"))
 
+if valor >= 100000:
+    print("Venda acima de R$100.000,00. Parabens!!")
+    print(f'A comissão será de {700+0.16*valor}.')
+elif 80000 <= valor < 100000:
+    print("Venda entre R$80.000,00 R$100.000,00. Parabens!!")
+    print(f'A comissão será de {650+0.14*valor}')
+elif 60000 <= valor < 80000:
+    print("Venda entre R$60.000,00 R$80.000,00.")
+    print(f'A comissão será de {600 + 0.14*valor}')
+elif 40000 <= valor < 60000:
+    print("Venda entre R$40.000,00 R$60.000,00.")
+    print(f'A comissão será de {550 + 0.14*valor}')
+elif 20000 <= valor < 40000:
+    print("Venda entre R$20.000,00 R$40.000,00.")
+    print(f'A comissão será de {500 + 0.14*valor}')
+elif valor < 20000:
+    print("Venda abaixo de R$20.000,00.")
+    print(f'A comissão será de {400 + 0.14*valor}')
+"""
 
 #-------------------------------------------------------
 # Exercicio 37 - preco cobrado pelo estacionamento
