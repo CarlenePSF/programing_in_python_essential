@@ -9,9 +9,8 @@ Exercicios para revisar 30  , 33
 #from math import factorial
 #from random import seed
 #from random import randint
-
-
-
+#import matplotlib.pyplot as plt
+from random import randint, seed
 """
 #------------------------------------------------------
 # Exercício 1 - multiplos de 3
@@ -212,6 +211,8 @@ for i in range(1, N+1, 1):
     if i % 2 != 0:
         v.append(i)
 print(f'Os primeiros números ímpares ate {N} são {v}')
+
+
 #----------------------------------------------------------------------------
 # Exercício 16 - Imprimindo os N primeiros números ímpares ordem decrescente
 #----------------------------------------------------------------------------
@@ -222,6 +223,8 @@ for i in range(N, 1, -1):
     if i % 2 != 0:
         v.append(i)
 print(f'Os primeiros números ímpares ate {N} são {v}')
+
+
 
 #----------------------------------------------------------------------------
 # Exercício 17 - Imprimindo os N primeiros números ímpares ordem decrescente
@@ -297,6 +300,8 @@ for num in v:
 print(f"A soma dos numeros pares contidos no intervalo e {soma}")
 print(f"O produto dos numero impares contidos no intervalo e {multi}")
 
+
+
 #--------------------------------------------------------------------------------
 # Exercicio 22 - calculando medias
 #-------------------------------------------------------------------------------
@@ -320,6 +325,8 @@ media = soma / i
 print(v)
 print(soma)
 print(media)
+
+
 
 #-------------------------------------------------------------------------------------------------------
 # Exercicio 23 - calculando os divisores de um numero
@@ -380,6 +387,8 @@ for i in range(1, num+1):
         break
 print(f"O primeiro multiplo de 11, 13 ou 17 e {v}")
 
+
+
 #-------------------------------------------------------------------------------------------------------
 # Exercicio 27 -Soma de uma serie harmonica
 #-------------------------------------------------------------------------------------------------------
@@ -389,6 +398,8 @@ i: int
 for i in range(1, n+1, 1):
     soma = soma + 1/i
 print(f"A soma da série harmônica é {soma}")
+
+
 
 #-------------------------------------------------------------------------------------------------------
 # Exercicio 28 -Soma da serie 1/N!
@@ -484,8 +495,7 @@ for k in range(0, n, 1):
         print(k)
     elif k % i == 0 and k % j == 0:
         print(k)
-"""
-'''
+
 #-------------------------------------------------------------------------------------------------------
 # Exercicio 34 - 
 #-------------------------------------------------------------------------------------------------------
@@ -496,11 +506,11 @@ for q in range(1, 10):
         print(q)
     else:
         continue
-'''
+
 #---------------------------------------------------------------
 # Exercicio 35 -
 #---------------------------------------------------------------
-'''
+
 a = int(input("Inicio do intervalo: "))
 b = int(input("Final do intervalo: "))
 
@@ -528,13 +538,12 @@ for i in range(1, n+1):
 print(f'A soma do quadrado dos {n} primeiros numeros naturais e {soma1}')
 print(f'O quadrado da soma dos {n} primeiros numeros naturais e {soma2**2}')
 print(f'A diferenca entre esses valores e {soma2**2 - soma1}')
-'''
 
 #---------------------------------------------------------------
 # Exercicio 37 - propriedade interessante de numeros com 4 algarismos
 #---------------------------------------------------------------
 
-'''
+
 for i in range(1000, 10000):
     j = str(i)
     n = int(j[0:2])
@@ -549,15 +558,15 @@ for i in range(1000, 10000):
 #---------------------------------------------------------------
 # Exercicio 38 -
 #---------------------------------------------------------------
-import matplotlib.pyplot as plt
+
 soma = 0
 x = []
 y = []
 c = []
-for i in range(1, 500):
-    for j in range(1, 500):
-        for k in range(1, 500):
-            if k**2 == i**2 + j**2 and k**2 < 250000:
+for i in range(1, 334):
+    for j in range(1, 334):
+        for k in range(1, 334):
+            if k**2 == i**2 + j**2 and k**2 < 111556:
                 soma = (soma+1)
                 x.append(i)
                 y.append(j)
@@ -570,4 +579,139 @@ plt.plot(x, y, '.', color='green')
 plt.legend()
 # Show the plot
 plt.show()
-'''
+
+
+#---------------------------------------------------------------
+# Exercicio 39 - Calcular a base de um triangulo
+#---------------------------------------------------------------
+
+base = float(input("Digite o valor para a base: "))
+altura = float(input("Digite o valor para altura: "))
+
+
+#---------------------------------------------------------------
+# Exercicio 40 - lendo numeros inteiros
+#---------------------------------------------------------------
+
+n = 0
+v = []
+while n >= 0:
+    n = int(input("Digite um numero: "))
+    v.append(n)
+lista = v.pop()
+print((sorted(lista)))
+print(f'O menor valor digitado foi {min(lista)}')
+print(f'O maior valor digitado foi {max(lista)}')
+
+
+#---------------------------------------------------------------
+# Exercicio 41 - Associacao em paralelo de dois resistores
+#---------------------------------------------------------------
+R1 = 1
+R2 = 1
+while R1 != 0 and R2 != 0:
+    R1 = int(input("Entre com a resistencia R1: "))
+    R2 = int(input("Entre com a resistencia R2: "))
+    if R1 != 0 and R2 != 0:
+        R = (R1*R2)/(R1+R2)
+        print(f'A resistencia total e {R}')
+    else:
+        break
+
+#---------------------------------------------------------------
+# Exercicio 42 - loop para calcular quadrado/cubo/raiz quadrada
+#---------------------------------------------------------------
+n = 1
+while n > 0:
+    n = int(input("entre com um valor: "))
+    if n > 0:
+        print(f'O quadrado de {n} e {n*n}')
+        print(f'O cubo de {n} e {n*n*n}')
+        print(f'A raiz quadrada de {n} e {n**(1/2)}')
+    else:
+        break
+        
+
+#---------------------------------------------------------------
+# Exercicio 43 - media de idade de determinado grupo 
+#---------------------------------------------------------------
+idade = 1
+soma = 0
+n = 0
+media = 0
+
+while idade != 0:
+    idade = int(input("Entre com a idade: "))
+    if idade > 0:
+        soma = soma+idade
+        n = n+1
+    elif idade <= 0:
+        break
+media = soma/n
+print(f'A media de idade do grupo e {int(media)}')
+
+
+#---------------------------------------------------------------
+# Exercicio 44 - Sequencia Fibonacci de um numero
+#---------------------------------------------------------------
+
+n = int(input("Entre com um numero positivo: "))
+
+# first two terms
+n1, n2 = 0, 1
+
+for i in range(2*n):
+    print(f'{i}:{n1}')
+    nth = n1 + n2
+    if n1 > n:
+        break
+    else:
+        n1 = n2
+        n2 = nth
+
+#---------------------------------------------------------------
+# Exercicio 45 - conversor de velocidade
+#---------------------------------------------------------------
+
+converte = True
+
+while converte:
+    unidade = int(input("Digite 1: km/h -> m/s ou 2: m/s -> km/h: "))
+    if unidade == 1:
+        velocidade = float(input("Qual a velocidade? "))
+        print(f'A velocidade em m/s é {velocidade/3.6}')
+    elif unidade == 2:
+        velocidade = float(input("Qual a velocidade? "))
+        print(f'A velocidade em km/h é {velocidade*3.6}')
+    converte = int(input("Digite 0 para sair ou 1 para continuar a converter:"))
+    if converte == 1:
+        continue
+    elif converte == 0:
+        break
+
+"""
+#------------------------------------------------------------------
+# Exercicio 46 - jogo da sorte com um pseudorandom number generator
+#------------------------------------------------------------------
+
+seed()
+
+tentativa = 1
+valor = 1
+while True:
+    num = int(input("Escolha um numero de 1 a 10: "))
+    valor = randint(1, 10)
+    print(valor)
+    if num == valor:
+        print(f' Parabéns, você ganhou! Sua escolha foi {num} e o sorteiro foi {valor}')
+        print(f'Você acertou com {tentativa} tentativas')
+        break
+    elif num < valor:
+        print(f' Desculpe! tente novamente, pois seu chute foi menor que o valor sorteado!')
+    elif num > valor:
+        print(f'Desculpe! tente novamente, pois seu chute foi maior que o valor sorteado!')
+    tentativa = tentativa+1
+
+#---------------------------------------------------------------
+# Exercicio 46 - jogo da sorte
+#---------------------------------------------------------------

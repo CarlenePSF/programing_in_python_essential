@@ -41,6 +41,7 @@ print(cores)
 
 
 print(help(print()))
+
 #DRY - Don't repeat yourself - Não repita você mesmo /
 # Não repita seu código. Principio da programação
 
@@ -81,12 +82,11 @@ def diz_oi():
 # ->> A Função não retorna nenhum valor
 
 #Chamando a função
-#ATENÇÃO : Sempre utilizar o parêntese!!
-#ERRADO: >>> diz_oi
+diz_oi()
+# ATENÇÃO : Sempre utilizar o parêntese!!
+# ERRADO: >>> diz_oi
 # CORRETO: >>> diz_oi()
 
-
-diz_oi()
 
 # *** Exemplo 2 -
 
@@ -98,13 +98,13 @@ def canta_parabens():
     print("Muitos anos de vida!")
     print("Viva o aniversariante")
 
-
-for i in range(5):
-    canta_parabens()
+# Podemos executar loops na funções
+#for i in range(5):
+#    canta_parabens()
 
 
 # Em python, podemos, inclusive, criar variáveis do tipo de uma função e executar esta função através da variável
-
+# Note a seguinte passagem de parâmetros
+# No entanto essa forma pode confundir! o indicado é usar o nome de definição da funcção.
 canta = canta_parabens
-
 canta()
