@@ -6,11 +6,11 @@ Exercicios para revisar 30  , 33
 
 """
 
-#from math import factorial
-#from random import seed
-#from random import randint
-#import matplotlib.pyplot as plt
-from random import randint, seed
+# from math import factorial
+# from random import seed
+# from random import randint
+# import matplotlib.pyplot as plt
+# from random import randint, seed
 """
 #------------------------------------------------------
 # Exercício 1 - multiplos de 3
@@ -689,7 +689,7 @@ while converte:
     elif converte == 0:
         break
 
-"""
+
 #------------------------------------------------------------------
 # Exercicio 46 - jogo da sorte com um pseudorandom number generator
 #------------------------------------------------------------------
@@ -712,6 +712,74 @@ while True:
         print(f'Desculpe! tente novamente, pois seu chute foi maior que o valor sorteado!')
     tentativa = tentativa+1
 
-#---------------------------------------------------------------
-# Exercicio 46 - jogo da sorte
-#---------------------------------------------------------------
+# ---------------------------------------------------------------
+# Exercicio 47 - calculadora
+# ---------------------------------------------------------------
+
+while True:
+    num1 = float(input("Entre com um  numero: "))
+    num2 = float(input("Entre com outro numero: "))
+    print("escolha uma das operacoes abaixo. ")
+    print("1 - adicao")
+    print("2 - subtracao")
+    print("3 - multiplicacao")
+    print("4 - divisao")
+    print("5 - sair")
+    op = int(input("Digite sua escolha: "))
+
+    if op == 1:
+        print(f'A soma de {num1} e {num2} e {num1 + num2}')
+    elif op == 2:
+        if num1 > num2:
+            print(f'A diferenca de {num1} e {num2} e {num1 - num2}')
+        else:
+            print(f'A diferenca de {num1} e {num2} e {num2 - num1}')
+    elif op == 3:
+        print(f'O produto de {num1} com {num2} e {num1 * num2}')
+    elif op == 4:
+        if num2 != 0:
+            print(f'A divisao entre {num1} por {num2} e  {num1 / num2}')
+        else:
+            print("Denominador igual a zero. Divisao nao e definida")
+    else:
+        break
+"""
+
+
+#----------------------------------------------------------------------------------
+# Exercicio 48 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
+#---------------------------------------------------------------------------------
+N = 20
+# first two terms of the Fibonacci sequence
+n1, n2 = 0, 1
+v = []
+soma = 0
+for i in range(N):
+    print(n1)
+    nth = n1 + n2
+    if n2 % 2 == 0:
+        soma = soma + n2
+        v.append(n2)
+    if soma <= N:
+        n1 = n2
+        n2 = nth
+        continue
+    else:
+        print(n2)
+        break
+
+print(f'Os elementos pares da sequencia sao {v}')
+print(f'A soma dos numeros pares da sequencia e {soma}')
+
+N = 20
+# first two terms of the Fibonacci sequence
+n1, n2 = 0, 1
+fibonacci = []
+for i in range(N):
+    fibonacci.append(n1)
+    nth = n1 + n2
+    n1 = n2
+    n2 = nth
+
+
+print(fibonacci)

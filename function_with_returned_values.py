@@ -63,7 +63,7 @@ print(diz_oi())
 # >>> retorna o Oi!, pois o print recebe o valor de retorno
 
 
-alguem = 'Carlene'
+alguem = 'Maria'
 print(diz_oi() + alguem)
 
 
