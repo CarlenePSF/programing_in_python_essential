@@ -743,35 +743,38 @@ while True:
             print("Denominador igual a zero. Divisao nao e definida")
     else:
         break
-"""
 
 
 #----------------------------------------------------------------------------------
 # Exercicio 48 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
 #---------------------------------------------------------------------------------
-N = 20
+
+
+N = 35
 # first two terms of the Fibonacci sequence
 n1, n2 = 0, 1
-v = []
 soma = 0
+
+v = []
+fibonacci = []
+
+
 for i in range(N):
+    fibonacci.append(n1)
     print(n1)
     nth = n1 + n2
-    if n2 % 2 == 0:
-        soma = soma + n2
-        v.append(n2)
-    if soma <= N:
-        n1 = n2
-        n2 = nth
-        continue
-    else:
-        print(n2)
-        break
+    n1 = n2
+    n2 = nth
+    if n1 % 2 == 0:
+        soma = soma + n1
+        v.append(n1)
 
+print(fibonacci)
 print(f'Os elementos pares da sequencia sao {v}')
 print(f'A soma dos numeros pares da sequencia e {soma}')
 
-N = 20
+
+N = 35
 # first two terms of the Fibonacci sequence
 n1, n2 = 0, 1
 fibonacci = []
@@ -783,3 +786,54 @@ for i in range(N):
 
 
 print(fibonacci)
+"""
+
+#------------------------------------------------------------------------------------
+# Exercicio 49 - Aplicacoes em caderneta de poupanca Pensarr
+#------------------------------------------------------------------------------------
+
+salario_carlos = float(input("Carlos, entre com o salario recebido do mes : "))
+salario_joao = (1. / 3.) * salario_carlos
+print(salario_joao)
+mes = 1
+rendimento_carlos = salario_carlos*0.02
+rendimento_joao = salario_joao*0.05
+
+retorno_joao = 0
+retorno_carlos = 0
+
+while rendimento_joao < rendimento_carlos:
+    rendimento_joao = rendimento_joao + 0.05*rendimento_joao
+    rendimento_carlos = rendimento_carlos + 0.02*rendimento_carlos
+    mes = mes+1
+
+    retorno_joao = rendimento_joao
+    retorno_carlos = rendimento_carlos
+    if retorno_joao >= retorno_carlos:
+        break
+
+
+print(f'Apos {mes} meses o rendimento de Joao ultrapassou o de Carlos')
+print(f'João recebera ao total {retorno_joao}')
+print(f'Carlos recebera ao total {retorno_carlos}')
+
+
+
+#------------------------------------------------------------------------------------
+# Exercicio 50 -
+#------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------
+# Exercicio 51 -
+# #------------------------------------------------------------------------------------
+
+
+#------------------------------------------------------------------------------------
+# Exercicio 52 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
+#-----------------------------------------------------------------------------------
+
+
+#----------------------------------------------------------------------------------
+# Exercicio 53 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
+#-----------------------------------------------------------------------------------

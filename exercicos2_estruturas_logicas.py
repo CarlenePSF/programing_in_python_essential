@@ -397,7 +397,7 @@ elif op == 4:
         print('Divisao por zero!!')
 
 #-----------------------------------------------------------------
-# Exercício 22 - Tempo de servico par aposentadoria
+# Exercício 22 - Tempo de servico e aposentadoria
 #-----------------------------------------------------------------
 
 idade = int(input('Qual a idade?'))

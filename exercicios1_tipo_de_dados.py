@@ -1,6 +1,8 @@
 """:cvar
 Lista d exercicios sobre tipos de dados
 """
+
+
 """
 #-------------------------------------------------
 # Exercicio numero 1
@@ -188,7 +190,7 @@ media = (nota1+nota2+nota3+nota4)/4.0
 print(f'A media aritmetica do aluno foi {media}')
 
 #---------------------------------------------------
-# EXercicio 30
+# Exercicio 30
 #---------------------------------------------------
 # Dolar dia 21/04/2021 : 5.57
 

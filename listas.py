@@ -392,11 +392,10 @@ print(nova)
 
 # Veja que ao utilizarmos .copy() copiamos os dados de uma lista
 # já definida para uma nova lista, que é independente da lista primária
-# Isso em python é chamado de deep copy (trans. cópia profunda)
+# Isso em python é chamado de deep copy (ou cópia profunda)
 
-#-------------------------
 # Forma 2 - Shallow copy
-#--------------------------
+
 lista = [1, 2, 3]
 print(lista)
 
