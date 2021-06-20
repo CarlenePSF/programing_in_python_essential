@@ -94,8 +94,86 @@ outra_funcao(42, 'Henrique', 9, 8, 7, estado_civil=True, java=False, python=True
 # (9, 8, 7)
 # Solteiro(a)
 # {'java': False, 'python': True}
+
+
+# Função com a ordem correta de parâmetros
+
+
+def mostra_resultados(a, b, *args, instrutor='Geek', **kwargs):
+    return [a, b, args, instrutor, kwargs]
+
+
+# A saida que esperamos para a execução
+# a = 1
+# b = 2
+# args = (3)
+# instruto = 'Geek'
+# kwargs = {
+#          'sobrenome': 'University',
+#          'cargo': 'instrutor'
+#          }
+
+
+print(mostra_resultados(1, 2, 3, sobrenome='University', cargo='instrutor'))
+# Saida:
+# >>> [1, 2, (3,), 'Geek', {'sobrenome': 'University', 'cargo': 'instrutor'}]
+
+# Função com a ordem incorreta de parâmetros
+
+
+def mostra_resultados2(a, b, instrutor='Geek',  *args, **kwargs):
+    return [a, b, args, instrutor, kwargs]
+
+
+# A saida que esperamos para a execução
+# a = 1
+# b = 2
+# args = (3)   #Tupla
+# instruto = 'Geek'
+# kwargs = {
+#          'sobrenome': 'University',
+#          'cargo': 'instrutor'
+#          }
+
+
+print(mostra_resultados2(1, 2, 3, sobrenome='University', cargo='instrutor'))
+# Saida:
+# >>> [1, 2, (), 3, {'sobrenome': 'University', 'cargo': 'instrutor'}]
+
+
+
+# Desempacotando o **kwargs
+
+def mostra_nome(**kwargs):
+    return f"{kwargs['nome']} {kwargs['sobrenome']}"
+
+
+nomes = {
+    'nome': 'Julia',
+    'sobrenome': 'language'
+    }
+# Note o uso do duplo asterisco
+print(mostra_nome(**nomes))
 """
 
+from collections import defaultdict
 
 
+def soma_num(a, b, c):
+    print(a+b+c)
 
+
+lista = [1, 2, 3]
+tupla = (1, 2, 3)
+conjunto = {1, 2, 3}
+
+soma_num(*lista)
+soma_num(*tupla)
+soma_num(*conjunto)
+
+dicio = defaultdict(list)
+dicionario = dict(a=1, b=2, c=3)
+soma_num(**dicionario)
+
+
+# ATENÇÃO: OS nomes das chaves em um dicionario devem ser os mesmo dos parâmetros da função
