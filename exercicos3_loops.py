@@ -830,10 +830,10 @@ print(f'Carlos recebera ao total {retorno_carlos}')
 
 
 #------------------------------------------------------------------------------------
-# Exercicio 52 -
+# Exercicio 52 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
 #-----------------------------------------------------------------------------------
 
 
 #----------------------------------------------------------------------------------
-# Exercicio 53 -
+# Exercicio 53 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
 #-----------------------------------------------------------------------------------
