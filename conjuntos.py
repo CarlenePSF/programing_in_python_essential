@@ -1,23 +1,24 @@
 """
 Conjuntos
 
-- Conjuntos em qualquer linguagem de programacao e relacionado
+- Conjuntos em qualquer linguagem de programacao é relacionado
   a teoria dos conjuntos na matematica.
-- Em python, os conjuntos sao chamados de sets. Ou seja, da mesma forma que na
+- Em python, os conjuntos são chamados de sets. Ou seja, da mesma forma que na
 matematica, os conjuntos em python terao as seguintes propriedades
 
- 1 - Sets (conjuntos) nao possuem valores duplicados
- 2 - Sets nao possuem valores ordenados
- 3 - Elementos nao sao acessados via indice, ou seja, nao podemos indexar conjuntos
+ 1 - Sets (conjuntos) não possuem valores duplicados
+ 2 - Sets não possuem valores ordenados
+ 3 - Elementos não são acessados via índice, ou seja, não podemos indexar
+     conjuntos.
 
 
-  - Conjuntos sao bons para utilizar quando precisamos armazenar
-    elementos, mas nao nos importamos com a ordenacao.
-  - Quando nao precisamos nos preocupar com chaves, valores e itens duplicados
+  - Conjuntos são bons para utilizar quando precisamos armazenar
+    elementos, mas não nos importamos com a ordenação.
+  - Quando não precisamos nos preocupar com chaves, valores e itens duplicados
 
-Os sets sao referenciados em python com chaves {}
+Os conjuntos, ou sets, são referenciados em python com chaves {}
 
-Diferenca entre conjuntos (sets) e mapas (dicionarios) em python:
+ATENÇÃO: Diferenca entre conjuntos (sets) e mapas (dicionarios) em python:
      - Um dicionario tem chave/valor;
      - Um conjunto tem apenas valor;
 
@@ -239,6 +240,3 @@ print(min(conjunto))
 print(len(conjunto))
 
 """
-
-
-
