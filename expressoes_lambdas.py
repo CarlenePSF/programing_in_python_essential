@@ -141,10 +141,3 @@ multiplicacao = lambda a, b: a*b
 
 print(multiplicacao(num1, num2))
 
-"""
-4 - Faça um programa que solicite cinco números ao usuário, depois disso, exiba apenas os números maiores do que 10.
-    Utilize a função filter para fazer isso.
-
-5 - Faça um programa que solicite dez números ao usuário, depois disso, exiba todos números pares e só então exiba 
-    todos os números ímpares. Utilize a função filter para fazer isso.
-"""
