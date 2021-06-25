@@ -78,7 +78,6 @@ print(inativo)
 inativo2 = list(filter(lambda user: not user['tweets'], users))
 print(inativo2)
 
-"""
 
 # Combinando filter() e map()
 
@@ -92,6 +91,7 @@ instrutores = list(filter(lambda nome: len(nome) < 5, nomes))
 
 frase = list(map(lambda nome: 'Sua instrutora é ' + nome, instrutores))
 print(frase)
+"""
 
 #  ******************** Vamos Praticar! ***********************
 
@@ -100,20 +100,23 @@ print(frase)
     Utilize a função filter para fazer isso.
 
 
-# pode usar um loop pu list comprehension (como no próximo exemplo)
+# pode usar um loop ou list comprehension (como no próximo exemplo)
 data = []
-for i in range(5):
+for i in range(5)
     dado = float(input("Digite um numero: "))
     data.append(dado)
+"""
+# Ou
+
+data = [float(input("Digite um numero: ")) for i in range(5)]
 
 print(list(filter(lambda num: num > 10, data)))
-"""
 
 """
 5 - Faça um programa que solicite dez números ao usuário, depois disso, exiba todos números pares e só então exiba 
     todos os números ímpares. Utilize a função filter para fazer isso.
-"""
 
 data2 = [float(input("Digite um numero: ")) for i in range(10)]
 print(list(filter(lambda num: num % 2 == 0, data2)))
 print(list(filter(lambda num: num % 2 != 0, data2)))
+"""
