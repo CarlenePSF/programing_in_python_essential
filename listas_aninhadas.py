@@ -1,8 +1,7 @@
- """
-
+"""
 Listas aninhadas (Nested lists)
 
--Algumas linguagens de programacao como C/Java/PHP  possuem uma estrutura de dados conhecida como arrays:
+-Algumas linguagens de programação como C/Java/PHP  possuem uma estrutura de dados conhecida como arrays:
     - Unidimensionais (array/vetores)
     - Multidimensionais (matrizes)
 
@@ -11,14 +10,14 @@ Em  python existe as listas
 numeros = [1, 2, 3, 4, 5, 'b', True, 2.41]
 
 # Exemplos
-# Como escreveriamos uma matrix 3x3
+# Como escreveríamos uma matrix 3x3
 listas = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 
 print(listas)
 print(type(listas))
 
 
-# Como podemos acessar os dados? (indexacao)
+# Como podemos acessar os dados? (indexação)
 # listas [linha][coluna]
 
 print(listas[0][0])   # acessando o elemento 1
@@ -58,8 +57,8 @@ print(velha)
 
 print([['*' for i in range(1, 4)] for j in range(1, 4)])
 
-OBS: list comprehension talvez sacrifique a clareza do codigo em detrimento da reducao do numero de linhas
-"""
+OBS: list comprehension talvez sacrifique a clareza do código em detrimento da redução do numero de linhas
+
 from random import randint, seed
 seed()
 
@@ -77,3 +76,4 @@ print(v)
 print(u)
 
 [[print(v[j][i]+u[j][i]) for i in range(0, 3)] for j in range(0, 3)]
+"""
