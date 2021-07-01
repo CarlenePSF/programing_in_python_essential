@@ -3,6 +3,8 @@ Expressões regulares (regular expression)
 
 definição: é uma forma de identificar cadeia de caracteres que contém determinado padão dentro de uma string
 
+A Regular Expression (RegEx) is a sequence of characters that defines a search pattern.
+
 Exemplos de utilização:
 1 - Num texto que contenha email de várias pessoas, é possível usar expressões regulares para extrair todos
 os emails como um  objeto na forma de lista.
