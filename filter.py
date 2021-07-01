@@ -105,12 +105,13 @@ data = []
 for i in range(5)
     dado = float(input("Digite um numero: "))
     data.append(dado)
-"""
+
 # Ou
 
 data = [float(input("Digite um numero: ")) for i in range(5)]
 
 print(list(filter(lambda num: num > 10, data)))
+"""
 
 """
 5 - Faça um programa que solicite dez números ao usuário, depois disso, exiba todos números pares e só então exiba 
@@ -120,3 +121,11 @@ data2 = [float(input("Digite um numero: ")) for i in range(10)]
 print(list(filter(lambda num: num % 2 == 0, data2)))
 print(list(filter(lambda num: num % 2 != 0, data2)))
 """
+
+
+dados = [1, 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 7, 7, 7, 7, 7, 8, 8, 9]
+
+dados_dup = {i for i in dados if dados.count(i) == 2}
+print(dados_dup)
+
+print(set(filter(lambda num: dados.count(num) == 2, dados)))

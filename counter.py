@@ -1,16 +1,16 @@
 """
 Modulo collections - counter (contador)
-As colecoes builtin do python sao listas, tuplas, conjuntos, dicionarios
+As coleções builtin do python sao listas, tuplas, conjuntos, dicionários
 Existe um modo especial no python conhecido como collections que fornece
-uma alternativa para as colecoes ja estudadas
+uma alternativa para as coleções ja estudadas
 
 Collection e conhecido  como high-performance container Datatype
 
-counter - recebe um iteravel como parametro e cria um objeto do tipo Collections counter
+counter - recebe um iterável como parâmetro e cria um objeto do tipo Collections counter
           que e parecido com um dicionario, contendo o elemento de lista passado como
-          parametro e como valor e quantidade de ocorrencias desse elemento
+          parâmetro e como valor e quantidade de ocorrências desse elemento
 
-#****** podemos utilizar qualquer iteravel!! No exemplo abaixo usamos uma lista ******
+#****** podemos utilizar qualquer iterável!! No exemplo abaixo usamos uma lista ******
 lista = [2, 4, 5, 1, 1, 1, 3, 3, 3, 6, 6, 6, 6, 7, 7, 7, 8, 8, 8, 9]
 cores = ['azul', 'verde', 'azul', 'vermelho', 'Azul', 'verde', 'amarelo']
 
@@ -21,7 +21,7 @@ res_string = Counter(cores)
 print(type(res_lista))
 print(type(cores))
 
-# Imprime a quantidade de ocorrencias de cada elemento na lista
+# Imprime a quantidade de ocorrências de cada elemento na lista
 print(res_lista)
 #>>> Counter({6: 4, 1: 3, 3: 3, 7: 3, 8: 3, 2: 1, 4: 1, 5: 1, 9: 1})
 
@@ -35,11 +35,11 @@ print(res_string)
 print(Counter('Geek University'))
 """
 
-#Importantando a biblioteca
+# Importando a biblioteca
 
 from collections import Counter
 
-#Exemplo 3 -
+# Exemplo 3 -
 
 texto = """ Python is an interpreted high-level general-purpose programming language. 
             Python's design philosophy emphasizes code readability with its notable 
@@ -88,7 +88,7 @@ print(palavras_texto1)
 res_texto1 = Counter(palavras_texto1)
 print(res_texto1)
 
-#encontrando as palavras com mais de 5 ocorrencias no texto 1
+# encontrando as palavras com mais de 5 ocorrências no texto 1
 print(res_texto1.most_common(5))
 
 
@@ -97,5 +97,5 @@ palavras_texto2 = texto2.split()
 res_texto2 = Counter(palavras_texto2)
 print(res_texto2)
 
-#encontrando as palavras com mais de 5 ocorrencias no texto 2
+# encontrando as palavras com mais de 5 ocorrências no texto 2
 print(res_texto2.most_common(5))

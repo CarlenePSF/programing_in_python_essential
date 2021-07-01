@@ -1,9 +1,9 @@
 """
 Lista de exercícios : trabalhando com loop
+update: exercitando o mesmo com list comprehension
 -> Uso de for, while, ranges, e break
 
-Exercicios para revisar 30  , 33
-
+Exercícios para revisar 30  , 33
 """
 
 # from math import factorial
@@ -11,75 +11,104 @@ Exercicios para revisar 30  , 33
 # from random import randint
 # import matplotlib.pyplot as plt
 # from random import randint, seed
+
 """
-#------------------------------------------------------
+# ------------------------------------------------------
 # Exercício 1 - multiplos de 3
-#------------------------------------------------------
-print(f'Os 5 primeiros multiplos de 3 sao:')
-for n in range(1, 6):
-    multiplo = 3*n
-    print(multiplo)
- 
-#------------------------------------------------------
-# Exercício 2 - 3 formas de executar loops
-# imprimindo numeros de 1 a 100, de 1 em 1
-#------------------------------------------------------
-# 1- usando o for
+# ------------------------------------------------------
+print(f'Os 5 primeiros multiplos de 3 são:')
+# for n in range(1, 6):
+#    multiplo = 3*n
+#    print(multiplo)
+
+# Usando list comprehension
+[print(f'{3*n}') for n in range(1, 6)]
+"""
+
+
+# ------------------------------------------------------
+# Exercício 2 - três formas de executar loops
+# Imprimindo números de 1 a 100, de 1 em 1
+# ------------------------------------------------------
+
+"""
+# 1 - usando o for
 for num in range(1, 101, 1):
     print(num)
 
-#usando o while
+# 2 - usando o while
 n = 1
 while n <= 100:
     print(n)
     n = n+1
-#usando uma especie de do-while
+# 3 - usando uma especie de do-while
 i = 1
 while True:
     print(i)
     i = i + 1
     if i > 100:
         break
+        
 
-#------------------------------------------------------
+#4 -  Usando list comprehension
+[print(i) for i in range(1, 101, 1)]
+"""
+
+
+# ---------------------------------------------------
 # Exercício 3 - contagem regressiva de 10 ate 0
-# #----------------------------------------------------
+# ---------------------------------------------------
+"""
 num = 10
 while num >= 0:
     print(num)
     num = num - 1
 print('FIM!')
 
+# Com list comprehension
+[print(i) for i in range(10, 0, -1)]
+print('FIM!')
+"""
 
-#------------------------------------------------------------------------
-# Exercício 4 - imprimindo numeros de 1000 em 1000 menores do que 100000
-# #----------------------------------------------------------------------
 
+# ----------------------------------------------------------------------
+# Exercício 4 - imprimindo números de 1000 em 1000 menores do que 100000
+# ----------------------------------------------------------------------
+"""
 n = 0
-
 while n < 100000:
     n = n + 1000
-    print(n)
+    print(f'{n}')
+    if n == 99000:
+        break
+print(f'\n')
+
+# Com list comprehension
+[print(i) for i in range(1000, 100000, 1000)]
+"""
+
+# ----------------------------------------------------------------
+# Exercício 5 - somando 10 números inseridos pelo usuário
+# ----------------------------------------------------------------
+
+# Na primeira forma de resolução somos agnósticos quanto a estrutura de listas e
+# as funções builtins para esses tipos de dados
+# soma = 0
+# for i in range(1, 11):
+#    n = int(input('Entre com um numero: '))
+#    soma = soma + n
+# print(f'A soma dos números fornecidos é {soma}')
+
+# Refatoramos o código acima com o uso de listas e do list comprehension.
+# Note a simplicidade em somente duas linas de código e a legibilidade do código!!
+v = [int(input('Entre com um numero: ')) for n in range(1, 11)]
+print(f'A soma dos elementos em {v} é {sum(v)}')
 
 
-#---------------------------------------------------------------------
-# Exercicio 5 - somando 10 numeros inseridos pelo usuario
-#---------------------------------------------------------------------
-v = []
-soma = 0
-
-for i in range(1, 11):
-    n = int(input('Entre com um numero: '))
-    v.append(n)
-    soma = soma + n
-
-print(v)
-print(soma)
-
-
-#---------------------------------------------------------------------
-# Exercicio 6 - media de 10 numeros inteiros inseridos pelo usuario
-#---------------------------------------------------------------------
+# ---------------------------------------------------------------------
+# Exercício 6 - media de 10 números inteiros inseridos pelo usuário
+# ---------------------------------------------------------------------
+"""
 v = []
 media = 0
 soma = 0
@@ -96,8 +125,8 @@ print(media)
 
 
 #---------------------------------------------------------------------------
-# Exercicio 7 - media de 10 numeros inteiros positivos inseridos pelo usuario
-# obs: Colocando uma condicao dentro do loop
+# Exercício 7 - media de 10 números inteiros positivos inseridos pelo usuário
+# obs: Colocando uma condição dentro do loop
 #---------------------------------------------------------------------------
 
 v = []
@@ -113,12 +142,12 @@ for i in range(1, 11):
     else:
         print('numero nao positivo inserido')
 print(f'Os numero inseridos  foram {v}')
-print(f'A media dos numeros positivos e {media}')
+print(f'A media dos números positivos e {media}')
 
 
 #-------------------------------------------------------------------------------
-# Exercicio 8 - inserindo 10 numeros e retornando o menor e maior valor inseridos
-# obs: Colocando uma condicao dentro do loop
+# Exercício 8 - inserindo 10 números e retornando o menor e maior valor inseridos
+# obs: Colocando uma condição dentro do loop
 #-------------------------------------------------------------------------------
 
 v = []
@@ -130,7 +159,7 @@ print(f'O menor valor digitado foi {v[0]}')
 print(f'O maior valor digitado foi {v[9]}')
 
 #-------------------------------------------------------------------------------
-# Exercicio 9 - Imprimindo os N primeiro numeros naturais impares
+# Exercício 9 - Imprimindo os N primeiro números naturais impares
 #-------------------------------------------------------------------------------
 
 N = int(input('Entre com um numero inteiro:'))
@@ -145,7 +174,7 @@ print(lista)
 
 
 #-------------------------------------------------------------------------------
-# Exercicio 10 - Calculando a soma dos 50 primeiros numeros naturais
+# Exercício 10 - Calculando a soma dos 50 primeiros números naturais
 #-------------------------------------------------------------------------------
 v = []
 soma = 0
@@ -161,7 +190,7 @@ print(soma)
 
 
 #---------------------------------------------------------------------------------
-# Exercicio 11 - imprimindo os N primeiros numeros naturais em ordem crescente
+# Exercício 11 - imprimindo os N primeiros números naturais em ordem crescente
 #----------------------------------------------------------------------------------
 
 N = int(input('Entre com um numero inteiro:'))
@@ -171,7 +200,7 @@ for i in range(0, N+1, 1):
 
 
 #-------------------------------------------------------------------------------
-# Exercicio 12 - imprimindo os N primeiros numeros naturais em ordem decrescente
+# Exercício 12 - imprimindo os N primeiros números naturais em ordem decrescente
 #-------------------------------------------------------------------------------
 
 N = int(input('Entre com um numero inteiro:'))
@@ -182,7 +211,7 @@ for i in range(N, -1, -1):
 
 
 #-----------------------------------------------------------------------------------
-# Exercicio 13 - imprimindo os N primeiros numeros naturais pares em ordem crescente
+# Exercício 13 - imprimindo os N primeiros números naturais pares em ordem crescente
 #-----------------------------------------------------------------------------------
 
 N = int(input('Entre com um numero inteiro positivo par: '))
@@ -192,7 +221,7 @@ for i in range(0, N+1, 1):
         print(i)
 
 #-----------------------------------------------------------------------------------
-# Exercicio 14 - imprimindo os N primeiros numeros naturais pares em ordem decrescente
+# Exercício 14 - imprimindo os N primeiros números naturais pares em ordem decrescente
 #-----------------------------------------------------------------------------------
 
 N = int(input('Entre com um numero inteiro positivo par: '))
@@ -253,7 +282,7 @@ print(f'O maior valor digitado foi {v[n-1]} ')
 print(f'O maior valor aparece {v.count(v[n-1])} vezes')
 
 #--------------------------------------------------------------------------------
-# Exercicio 19 - Imprimindo algarismos de um numero inteiro
+# Exercício 19 - Imprimindo algarismos de um número inteiro
 #-------------------------------------------------------------------------------
 num = input("Introduza um numero inteiro entre 100 e 999: ")
 
@@ -261,7 +290,7 @@ for i in range(0, 3):
     print(num[i])
 
 #--------------------------------------------------------------------------------
-# Exercicio 20 - Imprimindo algarismos de um numero inteiro
+# Exercício 20 - Imprimindo algarismos de um número inteiro
 #-------------------------------------------------------------------------------
 
 i = 0
@@ -278,11 +307,11 @@ while i <= 100:
         print("Numero impar")
     if num == 1000:
         break
-print(f"A quantidade de numeros  digitados foi {total}")
-print(f"A quantidade de numeros pares digitados foi {cont}")
+print(f"A quantidade de números  digitados foi {total}")
+print(f"A quantidade de números pares digitados foi {cont}")
 
 #--------------------------------------------------------------------------------
-# Exercicio 21 - Imprimindo algarismos de um numero inteiro
+# Exercício 21 - Imprimindo algarismos de um numero inteiro
 #-------------------------------------------------------------------------------
 
 a = int(input("Entre com um valor inicial para o intervalo: "))
@@ -297,13 +326,13 @@ for num in v:
         soma = soma + num
     elif num % 2 != 0:
         multi = multi*num
-print(f"A soma dos numeros pares contidos no intervalo e {soma}")
+print(f"A soma dos números pares contidos no intervalo e {soma}")
 print(f"O produto dos numero impares contidos no intervalo e {multi}")
 
 
 
 #--------------------------------------------------------------------------------
-# Exercicio 22 - calculando medias
+# Exercício 22 - calculando médias
 #-------------------------------------------------------------------------------
 
 media = 0.0
@@ -329,8 +358,8 @@ print(media)
 
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 23 - calculando os divisores de um numero
-# Se o numero for somente divisivel por 1 e por ele mesmo, com resto da divisao zero, e ele dito primo!
+# Exercício 23 - calculando os divisores de um numero
+# Se o numero for somente divisível por 1 e por ele mesmo, com resto da divisão zero, e ele dito primo!
 #-------------------------------------------------------------------------------------------------------
 n = int(input("Entre com um numero positivo: "))
 d = []
@@ -342,8 +371,8 @@ print(f"Os divisores de {n}, incluindo ele mesmo, sao {d}")
 
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 24 - calculando a soma dos divisores de um numero
-# Se o numero for somente divisivel por 1 e por ele mesmo, com resto da divisao zero, e ele dito primo!
+# Exercício 24 - calculando a SOMA dos divisores de um numero
+# Se o numero for somente divisível por 1 e por ele mesmo, com resto da divisão zero, e ele dito primo!
 #-------------------------------------------------------------------------------------------------------
 n = int(input("Entre com um numero positivo: "))
 d = []
@@ -357,8 +386,8 @@ print(f"Os divisores de {n}, excluindo ele mesmo, são {d}")
 print(f"A soma de todos os divisores de {n} é {soma}")
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 25 - calculando a soma dos divisores 3 e 5 menores que 100
-# Se o numero for somente divisivel por 1 e por ele mesmo, com resto da divisao zero, e ele dito primo!
+# Exercício 25 - calculando a soma dos divisores 3 e 5 menores que 100
+# Se o numero for somente divisível por 1 e por ele mesmo, com resto da divisão zero, e ele dito primo!
 #-------------------------------------------------------------------------------------------------------
 
 i = 0
@@ -370,12 +399,12 @@ while i < 100:
         soma = soma + 1
         v.append(i)
     i = i+1
-print(f"Todos os numeros naturais abaixo de 1000 que sao multiplos de 3 ou 5 sao {v}")
+print(f"Todos os números naturais abaixo de 1000 que sao multiplos de 3 ou 5 sao {v}")
 print(f"A soma deles e igual a {soma}")
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 26 - calculando a soma dos divisores 3 e 5 menores que 100
-# Se o numero for somente divisivel por 1 e por ele mesmo, com resto da divisao zero, e ele dito primo!
+# Exercício 26 - calculando a soma dos divisores 3 e 5 menores que 100
+# Se o numero for somente divisível por 1 e por ele mesmo, com resto da divisão zero, e ele dito primo!
 #-------------------------------------------------------------------------------------------------------
 
 num = int(input("Entre com um numero: "))
@@ -390,7 +419,7 @@ print(f"O primeiro multiplo de 11, 13 ou 17 e {v}")
 
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 27 -Soma de uma serie harmonica
+# Exercício 27 -Soma de uma serie harmônica
 #-------------------------------------------------------------------------------------------------------
 n = int(input("Entre com um valor: "))
 soma = 0
@@ -402,7 +431,7 @@ print(f"A soma da série harmônica é {soma}")
 
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 28 -Soma da serie 1/N!
+# Exercício 28 -Soma da serie 1/N!
 #-------------------------------------------------------------------------------------------------------
 n = int(input("Entre com um valor: "))
 soma = 0
@@ -414,7 +443,7 @@ print(soma)
 
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 29 -Soma da serie 1/N! com 5 termos
+# Exercício 29 -Soma da serie 1/N! com 5 termos
 #-------------------------------------------------------------------------------------------------------
 i = 0
 
@@ -426,7 +455,7 @@ print(soma)
 
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 30 - Soma de sequencias
+# Exercício 30 - Soma de sequencias
 # obs: verificar a soma2
 #-------------------------------------------------------------------------------------------------------
 
@@ -454,9 +483,9 @@ for k in range(1, n+1, 1):
     print(2*k-1)
     print(soma3)
 
-#-------------------------------------------------------------------------------------------------------
-# Exercicio 31 - Soma de sequencias
-#-------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
+# Exercício 31 - Soma de sequencias
+# -------------------------------------------------------------------------------------------------------
 i = 0
 soma = 0
 while i <= 49:
@@ -465,9 +494,9 @@ while i <= 49:
     i = i+1
 print(soma)
 
-#-------------------------------------------------------------------------------------------------------
-# Exercicio 32 - sequencias de lançamento de um dado
-#-------------------------------------------------------------------------------------------------------
+# -------------------------------------------------------------------------------------------------------
+# Exercício 32 - sequencias de lançamento de um dado
+# -------------------------------------------------------------------------------------------------------
 # seed random number generator
 seed()
 # generate random integer values
@@ -483,8 +512,8 @@ for i in range(0, 6):
         print("a = b")
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 33 - multiplos de um número natural qualquer
-# obs: ver esse exercicio 33!!!!!!!!!!!!!!
+# Exercício 33 - multiplos de um número natural qualquer
+# obs: ver esse Exercício 33!!!!!!!!!!!!!!
 #-------------------------------------------------------------------------------------------------------
 n = int(input("Entre com um valor (número natural) para n: "))
 i = int(input("Entre com um valor para i (numero natural): "))
@@ -497,7 +526,7 @@ for k in range(0, n, 1):
         print(k)
 
 #-------------------------------------------------------------------------------------------------------
-# Exercicio 34 - 
+# Exercício 34 - 
 #-------------------------------------------------------------------------------------------------------
 p = 1
 
@@ -508,7 +537,7 @@ for q in range(1, 10):
         continue
 
 #---------------------------------------------------------------
-# Exercicio 35 -
+# Exercício 35 -
 #---------------------------------------------------------------
 
 a = int(input("Inicio do intervalo: "))
@@ -523,11 +552,11 @@ elif a < b:
             soma = soma + i
 
 if soma != 0:
-    print(f'A soma dos numeros impares no intervalo de [{a},{b}] e {soma}')
+    print(f'A soma dos números impares no intervalo de [{a},{b}] e {soma}')
 
-#---------------------------------------------------------------
-# Exercicio 36 - 
-#---------------------------------------------------------------
+# ---------------------------------------------------------------
+# Exercício 36 - 
+# ---------------------------------------------------------------
 
 n = 10
 soma1 = 0
@@ -771,7 +800,7 @@ for i in range(N):
 
 print(fibonacci)
 print(f'Os elementos pares da sequencia sao {v}')
-print(f'A soma dos numeros pares da sequencia e {soma}')
+print(f'A soma dos números pares da sequencia e {soma}')
 
 
 N = 35
@@ -786,11 +815,11 @@ for i in range(N):
 
 
 print(fibonacci)
-"""
 
-#------------------------------------------------------------------------------------
-# Exercicio 49 - Aplicacoes em caderneta de poupanca Pensarr
-#------------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------------
+# Exercício 49 - Aplicações em caderneta de poupança --- Pensar
+# ------------------------------------------------------------------------------------
 
 salario_carlos = float(input("Carlos, entre com o salario recebido do mes : "))
 salario_joao = (1. / 3.) * salario_carlos
@@ -813,27 +842,23 @@ while rendimento_joao < rendimento_carlos:
         break
 
 
-print(f'Apos {mes} meses o rendimento de Joao ultrapassou o de Carlos')
+print(f'Após {mes} meses o rendimento de Joao ultrapassou o de Carlos')
 print(f'João recebera ao total {retorno_joao}')
 print(f'Carlos recebera ao total {retorno_carlos}')
 
+# ------------------------------------------------------------------------------------
+# Exercício 50 -
+# ------------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------------------------
+# Exercício 51 -
+# ------------------------------------------------------------------------------------
 
-#------------------------------------------------------------------------------------
-# Exercicio 50 -
-#------------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------------
+# Exercício 52 -
+# -----------------------------------------------------------------------------------
 
-
-#------------------------------------------------------------------------------------
-# Exercicio 51 -
-# #------------------------------------------------------------------------------------
-
-
-#------------------------------------------------------------------------------------
-# Exercicio 52 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
-#-----------------------------------------------------------------------------------
-
-
-#----------------------------------------------------------------------------------
-# Exercicio 53 - Somando os numeros pares da sequencia Fibonacci menores do que 4e^6
-#-----------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------
+# Exercício 53 -
+# -----------------------------------------------------------------------------------
+"""

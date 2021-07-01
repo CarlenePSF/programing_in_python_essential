@@ -1,32 +1,32 @@
 """
 Loop for
-loop -> Estrutura de repeticao
-for -> uma das estruturas de repeticao
+loop -> Estrutura de repetição
+for -> uma das estruturas de repetição
 
 #Na linguagem C:
 for(int i = 0; i<10; i++) {
-//instrucao do loop
+//instrução do loop
 }
 
 #Em Python
 for item in range:
  //excussao
 
-Utilizamos loops para iterar sobre sequencias ou sobre valores iteraveis.
-exemplos de iteraveis:
+Utilizamos loops para iterar sobre sequencias ou sobre valores iteráveis.
+exemplos de iteráveis:
 - Strings:
     nome = 'Geek University'
 - Listas (vetores em 1D):
    listas = [1, 2, 3, 4]
 - Range:
-    numeros = range(1, 10)
+    números = range(1, 10)
 """
 
 
 """
 nome = 'Geek University'
 lista = [1, 3, 5, 7, 9]
-numeros = range(1, 10)    # vai ser transformado em uma lista
+números = range(1, 10)    # vai ser transformado em uma lista
 
 
 #Exemplo de for iterando em uma string
@@ -41,9 +41,9 @@ for numero in lista:
 
 # Exemplo de for iterando sobre um range
 #range (valor_inicial, valor_final)
-#OBS: valor_final nao incluido
+#OBS: valor_final nao incluído
 
-for numero in numeros:
+for numero in números:
     print(numero)
 """
 nome = 'Geek University'
@@ -65,7 +65,7 @@ for value in enumerate(nome):
     print(value)
 """
 """
-#Pedindo um valor para execucao do loop ao usuario 
+#Pedindo um valor para execução do loop ao usuário 
 qtd = int(input('Quantas vezes o loop deve ser executado?'))
 soma = 0
 for n in range(1, qtd+1):
@@ -77,11 +77,10 @@ print(f'A soma e {soma}')
 for letra in nome:
     print(letra, end='')
 """
-#Imprimeindo emoticons
+# Imprimindo emoticons
 # original U+1F60D
 # modificado U0001F60D
 
 for num in range(1, 11):
-    #print("\U0001F60D" * num)
+    # print("\U0001F60D" * num)
     print('\U0001F923')
-
