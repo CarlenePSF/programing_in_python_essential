@@ -387,7 +387,7 @@ print(f'A {nome} nasceu em {2021- int(idade)} e tem {idade} anos ')
 print("%s tem %s de idade" % (nome, idade))
 
 #------------------------------------------------
-# Exercicio 51
+# Exercício 51
 # -----------------------------------------------
 
 x = float(input('Qual a coordenada x?'))
@@ -396,8 +396,8 @@ distancia = (x**2 + y**2)**(1/2)
 print(f'A distncia do ponto ({x},{y}) da origem (0,0) e {distancia}')
 """
 
-#------------------------------------------------
-# Exercicio 52
+# ------------------------------------------------
+# Exercício 52
 # -----------------------------------------------
 
 p1 = float(input('Aposta do primeiro jogador:'))
