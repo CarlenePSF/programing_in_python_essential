@@ -3,7 +3,7 @@ Utilizando lambdas
 
 Conhecidas por Expressões lambdas, ou simplesmente lambdas, são funções sem nome, ou seja, funções anonimas.
 
-# uma função em Python
+# uma função em Python é definida como abaixo
 
 def soma(a, b):
     return a+b
@@ -64,14 +64,14 @@ print(duas(1, 1))
 print(tres(1, 1, 1))
 
 
-Ok, entendi o conceito, mas para o que isso serve? Agora vem a parte mais complicada desta lição,
-existem funções que podem receber outras funções por parâmetro!
+Ok, entendi o conceito, mas para o que isso serve?
+Agora vem a parte mais complicada desta lição. Existem funções que podem receber outras funções por parâmetro!
 
 Sim, você não leu errado, uma função recebe como parâmetro outra função. Estes são os exemplos
 onde as expressões lambda são mais utilizadas.
 
 
-# Outro exemplo uso mais adequado para expressões lambdas
+# Outro exemplo: uso mais adequado para expressões lambdas
 
 autores = ['J. R. R. Tolkien', 'H. G. Wheels', 'Isaac Asimov', 'Jane Austen', 'Dan Brown',
            'Edgar Alan Poe', 'Itamar Vieira Jr']
@@ -105,7 +105,6 @@ print(quadrado(2, 3, 1)(2))
 print(quadrado(2, 3, 1)(4))
 """
 
-
 """
 ******************** Vamos Praticar! ***********************
 
@@ -125,6 +124,7 @@ print(escreve_string())
 nome = input("Qual o seu nome? ")
 idade = input("Qual a sua idade? ")
 
+
 escreve_string_2 = lambda: f'{nome} possui {idade} anos.'
 print(escreve_string_2())
 
@@ -136,8 +136,6 @@ print(escreve_string_2())
 num1 = float(input("Digite um número: "))
 num2 = float(input("Digite outro numero "))
 
-
-multiplicacao = lambda a, b: a*b
+multiplicacao = lambda a, b: a * b
 
 print(multiplicacao(num1, num2))
-

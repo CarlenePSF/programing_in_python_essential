@@ -1,5 +1,6 @@
 """
 Filtros em Python
+Uso mais comum de expressões lambdas
 
 filter() -> Serve para filtrar dados de uma determinada coleção
 
@@ -128,4 +129,4 @@ dados = [1, 1, 1, 2, 2, 3, 3, 4, 5, 5, 6, 7, 7, 7, 7, 7, 8, 8, 9]
 dados_dup = {i for i in dados if dados.count(i) == 2}
 print(dados_dup)
 
-print(set(filter(lambda num: dados.count(num) == 2, dados)))
+print(set(filter(lambda num: dados.count(num) >= 2, dados)))

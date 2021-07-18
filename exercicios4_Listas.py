@@ -1,12 +1,13 @@
 """
 Exercícios de listas, tuplas, dicionário, sets
 """
-# from random import seed
+from random import seed
+import random
 import numpy as np
+# from math import sqrt
 # seed random number generator
-# np.random.seed(25)
-np.random.seed(25)
-
+np.random.seed(21)
+seed(25)
 """
 # ---------------------------------
 # Exercício 1 - 
@@ -391,7 +392,7 @@ for i in range(10):
     else:
         C.append(B[i])
 print(C)
-"""
+
 
 
 # ---------------------------------------------------------
@@ -418,5 +419,190 @@ print(V1_dot_V2)
 
 
 # ---------------------------------------------------------
-# Exercício 24 - produto escalar de dois conjuntos
+# Exercício 24 - comparando alturas entre alunos
+# ---------------------------------------------------------
+i = 0
+dados = []
+# Gerando os IDs aleatoriamente
+ID = random.sample(range(1, 100), 10)
+print(ID)
+
+# Gerando os dados da altura aleatoriamente
+while i <= 9:
+    alturas = 1.5+np.random.rand()
+    entradas = [ID[i],  float("{:.2f}".format(alturas))]
+    dados.append(entradas)
+    i += 1
+print(dados)
+
+alturas = sorted([dados[i][1] for i in range(len(dados))])
+
+for i in range(10):
+    if alturas[0] == dados[i][1]:
+        print(f'O aluno mais baixo mede {alturas[0]} e tem ID = {dados[i][0]}')
+    elif alturas[9] == dados[i][1]:
+        print(f'O aluno mais alto mede {alturas[9]} e tem ID = {dados[i][0]}')
+
+
+# ---------------------------------------------------------
+# Exercício 25 - os primeiros 100 números que não são multiplos de 7 e nem terminam em 7
+# ---------------------------------------------------------
+step = 12
+not_seven_multiples = []
+while len(not_seven_multiples) < 100:
+    step = step+1
+    string = str(step)
+    if step % 7 != 0 and string[-1] != '7':
+        not_seven_multiples.append(step)
+print(not_seven_multiples)
+
+
+# ---------------------------------------------------------
+# Exercício 26 - desvio padrão
+# ---------------------------------------------------------
+numeros = random.sample(range(1, 50), 10)
+media = sum(numeros)/len(numeros)
+soma = 0
+for element in numeros:
+    soma += (element-media)**2
+desvio_padrao = sqrt((1/(len(numeros)-1)) * soma)
+print(f'O desvio padrão da amostra {numeros} é: ')
+print(float("{:.2f}".format(desvio_padrao)))
+
+
+
+# ---------------------------------------------------------
+# Exercício 27 - imprimindo números primos --- revisar!!!!
+# ---------------------------------------------------------
+
+numeros_aleatorios = random.sample(range(1, 11), 10)
+print(numeros_aleatorios)
+
+primos = []
+
+for indice, elemento in enumerate(numeros_aleatorios):
+    if elemento > 1:
+        for i in range(2, elemento):
+            if elemento % i == 0:
+                print(elemento, "is not a prime number because", i, "times", elemento // i, "is", elemento)
+                break
+            else:
+                print(f'O número {elemento} é primo e está na posição {indice}')
+                break
+
+
+# ---------------------------------------------------------
+# Exercício 28 -
+# ---------------------------------------------------------
+
+mais_numeros = random.sample(range(1, 11), 10)
+print(mais_numeros)
+
+pares = []
+impares =[]
+
+for elemento in mais_numeros:
+    if elemento % 2 == 0:
+        pares.append(elemento)
+    else:
+        impares.append(elemento)
+
+print(f'Elementos pares de V são: {pares}')
+print(f'Elementos impares de V são: {impares}')
+
+# ---------------------------------------------------------
+# Exercício 29 -
+# ---------------------------------------------------------
+
+inteiros = random.sample(range(1, 100), 6)
+print(inteiros)
+pares2 = []
+impares2 = []
+
+for elemento in inteiros:
+    if elemento % 2 == 0:
+        pares2.append(elemento)
+    else:
+        impares2.append(elemento)
+
+print(f'Elementos pares  são: {pares2}. A soma deles é {sum(pares2)}')
+print(f'Elementos impares são: {impares2}. A lista contém {len(impares2)} elementos.')
+
+# ---------------------------------------------------------
+# Exercício 30 -
+# ---------------------------------------------------------
+vetor1 = random.sample(range(1, 100), 10)
+vetor2 = random.sample(range(1, 100), 10)
+print(sorted(vetor1), sorted(vetor2))
+intersection = []
+
+for element1 in vetor1:
+    if element1 in vetor2:
+        intersection.append(element1)
+print(intersection)
+
+
+# ---------------------------------------------------------
+# Exercício 31 -
+# ---------------------------------------------------------
+vetor1 = random.sample(range(1, 100), 10)
+vetor2 = random.sample(range(1, 100), 10)
+print(f'Os elementos do vetor 1 são {sorted(vetor1)}')
+print(f'Os elementos do vetor 2 são {sorted(vetor2)}')
+union = [i for i in vetor1]
+for element in vetor2:
+    union.append(element)
+
+union = list(set(union))
+print(f'A união dessas listas é {sorted(union)}')
+
+
+# ---------------------------------------------------------
+# Exercício 32 -
+# ---------------------------------------------------------
+x = random.sample(range(1, 15), 5)
+y = random.sample(range(1, 15), 5)
+print(x, y)
+soma_vetorial = []
+produto_escalar = []
+complementar = []
+intersecao = []
+for i in range(5):
+    soma = x[i]+y[i]
+    prod = x[i]*y[i]
+    soma_vetorial.append(soma)
+    produto_escalar.append(prod)
+    if x[i] not in y:
+        complementar.append(x[i])
+    elif x[i] in y:
+        intersecao.append(x[i])
+    elif y[i] in x:
+        intersecao.append(y[i])
+
+
+uniao = [i for i in x]
+for element in y:
+    uniao.append(element)
+uniao = list(set(uniao))
+
+print(f'A soma de x e y é {soma_vetorial}')
+print(f'O produto escalar entre x e y é {produto_escalar}')
+print(f'Os elementos que estão em x mas não estão em y são {complementar}')
+print(f'A interseção entre x e y é {intersecao}')
+print(f'A união dessas x e y é {sorted(uniao)}')
+"""
+
+# ---------------------------------------------------------
+# Exercício 33 -
+# ---------------------------------------------------------
+x = [random.randint(0, 10) for i in range(15)]
+print(x)
+for i, element in enumerate(x):
+    if element == 0:
+        x.pop(i)
+
+print(x)
+
+# ---------------------------------------------------------
+# Exercício 34 -
 # ---------------------------------------------------------
