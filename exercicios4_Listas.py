@@ -2,7 +2,7 @@
 Exercícios de listas, tuplas, dicionário, sets
 """
 from random import seed
-import random
+# import random
 import numpy as np
 # from math import sqrt
 # seed random number generator
@@ -590,7 +590,7 @@ print(f'O produto escalar entre x e y é {produto_escalar}')
 print(f'Os elementos que estão em x mas não estão em y são {complementar}')
 print(f'A interseção entre x e y é {intersecao}')
 print(f'A união dessas x e y é {sorted(uniao)}')
-"""
+
 
 # ---------------------------------------------------------
 # Exercício 33 -
@@ -602,7 +602,25 @@ for i, element in enumerate(x):
         x.pop(i)
 
 print(x)
+"""
+
 
 # ---------------------------------------------------------
 # Exercício 34 -
+# ---------------------------------------------------------
+numeros = []
+for i in range(10):
+    entrada = float(input("digite um numero: "))
+    if i == 0:
+        numeros.append(entrada)
+    elif entrada in numeros:
+        entrada = float(input("Numero ja existe na lista! Por favor insira outro numero: "))
+        numeros.append(entrada)
+    else:
+        numeros.append(entrada)
+print(numeros)
+
+
+# ---------------------------------------------------------
+# Exercício 35 -
 # ---------------------------------------------------------
