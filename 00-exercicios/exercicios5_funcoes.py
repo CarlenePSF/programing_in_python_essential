@@ -1,5 +1,6 @@
 """
 Lista de exercícios sobre funções
+from math import sqrt, pi
 
 
 #----------------------------------------------------
@@ -79,10 +80,6 @@ quadrado_perfeito()
 # Exercício 5 - Cálculo do volume de uma esfera
 # -------------------------------------------------------------
 
-
-from math import pi
-
-
 def volume_esfera(r):
     volume = (4./3.)*pi*r**3
     return f'O volume da esfera de raio {r} é {volume} m^3'
@@ -106,11 +103,160 @@ m = int(input('digite os minutos: '))
 s = int(input('digite os segundo: '))
 
 print('A conversão para segundos é', convert_segundos(h, m, s))
-"""
+
 
 # --------------------------------------------------
 # Exercício 7 - convertendo escalas de temperatura
 # --------------------------------------------------
 
+def convert_Fahrenheit(fahrenheit):
+    return fahrenheit * (9 / 5) + 32.0
 
 
+T_c = float(input('Type the temperature in Celsius: '))
+print(f'The result of the conversion {convert_Fahrenheit(T_c)} Fº')
+
+
+# --------------------------------------------------
+# Exercício 8 - triangulo retangulo 
+# --------------------------------------------------
+
+def hipotenusa(a, b):
+    return round(sqrt(a**2 + b**2), 2)
+
+
+a1 = float(input('Digite o valor do primeiro cateto em cm: '))
+a2 = float(input('Digite o valor do segundo cateto em cm: '))
+
+print(f'A hipotenusa do triangulo mede {hipotenusa(a1, a2)} cm')
+
+# --------------------------------------------------
+# Exercício 9 - volume do cilindro
+# --------------------------------------------------
+
+def volume_cilindro(h, r):
+    return pi * r ** 2 * h
+
+
+altura = float(input('Digite a altura do cilindro em cm: '))
+raio = float(input('Digite o valor do raio da base em cm: '))
+print(f'O volume desse cilindro é {volume_cilindro(altura, raio)} cm3')
+
+# --------------------------------------------------
+# Exercício 10 - o maior de dois números
+# --------------------------------------------------
+
+
+def MaiorDeDois(num1, num2):
+    if num1 > num2:
+        return f'{num1} é maior.'
+    else:
+        return f'{num2} é maior.'
+
+
+a = float(input('Digite um número: '))
+b = float(input('Digite outro número: '))
+print(MaiorDeDois(a, b))
+
+# --------------------------------------------------
+# Exercício 11 - Notas de alunos
+# --------------------------------------------------
+
+
+def Media_Notas(notas, op='P'):
+    if op == 'A':
+        return f'A média aritmética das notas é {round(sum(notas)/len(notas), 2)}'
+    elif op == 'P':
+        return f'A média ponderada das notas é {round((notas[0]*5+notas[1]*3+notas[2]*2)/10, 2)}'
+
+
+Notas = [float(input(f'Digite a nota {i+1}: ')) for i in range(3)]
+media = input('Média: aritmética (A) ou ponderada (P): ')
+print(Media_Notas(Notas, media))
+
+# --------------------------------------------------
+# Exercício 12 -
+# --------------------------------------------------
+
+def soma_algarismos(num):
+    try:
+        if num >= 0:
+            v = str(num)
+            lista = [float(i) for i in v]
+            print(f'A soma dos algarismo de {num} é {sum(lista)}')
+        elif num < 0:
+            return 'Número inválido'
+    except ValueError or SyntaxError or TypeError:
+        return 'algo deu errado'
+
+
+print(soma_algarismos(0))
+
+# --------------------------------------------------
+# Exercício 13 - calculadora simples
+# --------------------------------------------------
+
+
+def calculadora(x1, x2, op):
+    if op == '+':
+        return x1+x2
+    elif op == '-':
+        return x1-x2
+    elif op == '*':
+        return x1*x2
+    elif op == '/':
+        try:
+            return x1/x2
+        except ZeroDivisionError as err1:
+            print(f'algo deu errado: {err1}')
+
+
+print(calculadora(2, 0, '*'))
+"""
+# --------------------------------------------------
+# Exercício 14 -
+# --------------------------------------------------
+
+
+def consumo(distancia, litros):
+    try:
+        res = distancia/litros
+        if res < 8:
+            print(f'O consumo é de {res}. Venda o carro!')
+        elif 8 <= res <= 14:
+            print(f'O consumo é de {res}. Econômico!')
+        elif  res >= 12:
+            print(f'O consumo é de {res}. Super econômico!')
+    except (NameError, ZeroDivisionError, TypeError, SyntaxError) as err1:
+        print(f'Algo deu errado: {err1}')
+        
+    
+consumo(15, 1.5)
+
+    
+# --------------------------------------------------
+# Exercício extra -  probabilidades
+# --------------------------------------------------
+# from random import randint, seed
+# seed(2)
+#
+# lista = [randint(0, 1) for i in range(40)]
+# print(lista)
+#
+#
+# def reduz_elementos(lista_original):
+#     lista_copy = lista_original.copy()
+#     for i in lista_copy:
+#         if lista_copy.count(i) > 1:
+#             lista_copy.remove(i)
+#     return list(set(lista_copy))
+#
+#
+# def probabilidade(lista_original, lista_reduzida):
+#     return [(lista_original.count(i)/len(lista_original)) for i in lista_reduzida]
+#
+#
+# reduzida = reduz_elementos(lista)
+# print(reduzida)
+# print(probabilidade(lista, reduzida))
+# print('Soma das probabilidades:', sum(probabilidade(lista, reduzida)))
