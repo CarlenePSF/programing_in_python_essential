@@ -70,4 +70,4 @@ print(final)
 # Por que utilizar este formato?
 # O debug é utilizado durante o desenvolvimento. Costumamos, realizar todos os imports de bibliotecas no
 # início do código. Como o PDB só será usado onde queremos detectar problema, podemos fazer o import somente
-# onde vamos debuggar. Ao finalizar o debug, removemos imediatamente o pdb.
+# onde vamos debuggar. Ao finalizar o debug, removemos imediatamente o pdb!!!

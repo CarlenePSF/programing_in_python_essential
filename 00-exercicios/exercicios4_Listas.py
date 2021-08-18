@@ -1,13 +1,13 @@
 """
 Exercícios de listas, tuplas, dicionário, sets
 """
-from random import seed
+# from random import seed
 # import random
-import numpy as np
+# import numpy as np
 # from math import sqrt
 # seed random number generator
-np.random.seed(21)
-seed(25)
+# np.random.seed(21)
+# seed(25)
 """
 # ---------------------------------
 # Exercício 1 - 
@@ -602,7 +602,7 @@ for i, element in enumerate(x):
         x.pop(i)
 
 print(x)
-"""
+
 
 
 # ---------------------------------------------------------
@@ -624,3 +624,88 @@ print(numeros)
 # ---------------------------------------------------------
 # Exercício 35 -
 # ---------------------------------------------------------
+
+
+# ---------------------------------------------------------
+# Exercício 36 - 
+# ---------------------------------------------------------
+
+reais = []
+for i in range(10):
+    entrada = float(input("digite um numero: "))
+    if i == 0:
+        reais.append(entrada)
+    elif entrada in reais:
+        entrada = float(input("Numero ja existe na lista! Por favor insira outro numero: "))
+        reais.append(entrada)
+    else:
+        reais.append(entrada)
+print(reais)
+reais.sort()
+print(reais)
+
+
+# ---------------------------------------------------------
+# Exercício 37 - vetor com 11 elementos
+#  ordenado tal que a1 < a2 < a3 ... < a6 > a7 > a8
+# ---------------------------------------------------------
+
+vetor = [45.0, 448.0, 256.0, 2.0, 5.0, 5.5, 75.0, 63.0, 15.0, 984.0, 487]
+final = []
+ordenado_crescente = sorted(vetor.copy())
+ordenado_decrescente = sorted(vetor.copy(), reverse=True)
+
+#print(ordenado_crescente, ordenado_decrescente)
+
+for i in range(6):
+    final.append(ordenado_crescente[i])
+for i in range(5):
+    final.append(ordenado_decrescente[i])
+
+print(final)
+
+# ---------------------------------------------------------
+# Exercício 38 -
+# ---------------------------------------------------------
+
+reais = []
+for i in range(10):
+    entrada = float(input("digite um numero: "))
+    reais.append(entrada)
+    reais.sort()
+
+print(reais)
+"""
+# ---------------------------------------------------------
+# Exercício 39 - Triângulo de Pascal
+# ---------------------------------------------------------
+
+
+def calcula_posicao(n, k):
+    if k == 0 or k == n:
+        return 1
+    else:
+        return int(calcula_posicao(n - 1, k - 1)) + int(calcula_posicao(n - 1, k))
+
+
+print(int(calcula_posicao(6, 5)))
+
+
+def pascalLine(linhas):
+    linhas = linhas + 1
+    triangulo = []
+
+    for linha in range(linhas):
+        valores_linha = []
+
+        for coluna in range(linha + 1):
+            valores_linha.append(calcula_posicao(linha, coluna))
+
+        triangulo.append(valores_linha)
+
+    return triangulo
+
+
+imprime = pascalLine(5)
+for i in range(len(imprime)):
+    print(imprime[i])
