@@ -5,11 +5,9 @@ Atenção: É importante prestar atenção e a prender a ler as saídas de erros
 
 # A linha abaixo fornece um NameError
 # printf('geek Univerity')
-# A IDE oferece a alternativa de refatorar o código ou cria uma função
+# Algumas IDEs, como o PyCharm, oferecem a alternativa de refatorar o código ou cria uma funçãochamada 'printf'
 
-Os erros mais comuns:
-
-
+     Os erros mais comuns:
 # -----------------------------------
 1 - SyntaxError --> Ocorre quando o Python encontra um erro de sintaxe. Ou seja, você escreveu algo que o python
 não reconhece como parte da linguagem.
