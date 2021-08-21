@@ -155,23 +155,23 @@ def incremento():
 
 for i in range(3):
     print(incremento())
+"""
+
 
 # Podemos ter funções declaradas dentro de funções e também tem uma forma especial de escopo de variáveis
+
 
 def fora():
     contador = 0
 
     def dentro():
-        #indicando que a variável naõ é global mas esta dentro da função anterior
+        # indicando que a variável naõ é global mas esta dentro da função anterior
         nonlocal contador
-        contador = contador+1
+        contador = contador + 1
         return contador
+
     return dentro()
 
 
 for i in range(3):
     print(fora())
-"""
-
-
-

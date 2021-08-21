@@ -64,8 +64,10 @@ print(soma_num(1, 2, 3, 4))
 def soma_num(*args):
     '''
     Calcula a soma de números fornecidos pelo usuário e retorna o resultado
-    :param: args
-    :return: total (local variable)
+    param:
+        args
+    return:
+         total (local variable)
     '''
     total = 0
     for el in args:

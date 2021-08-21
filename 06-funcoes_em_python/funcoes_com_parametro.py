@@ -85,7 +85,7 @@ print(outra(5, 3, 'Geek '))
 # O ideal é nomear os parâmetros com nomes que tenham sentido
 
 #       A diferença entre parâmetro x argumento
-# parametros são variáveis declaradas na definição de uma função
+# parâmetros são variáveis declaradas na definição de uma função
 # Argumentos são dados passados durante a execução de uma função
 
 #nome, sobrenome são parâmetros
