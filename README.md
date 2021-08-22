@@ -11,7 +11,7 @@ A carga horária é de mais de 64 horas no total, cobrindo os seguintes tópicos
 - Expressões Lambdas;
 - Debugar seu código e tratar erros;
 - Módulos;
-- Leitura e Escrita em arquivos;
+- Leitura e Escrita em arquivos; 
 - Iteradores e Geradores;
 - Decorators;
 - Orientação a Objetos;
@@ -25,3 +25,6 @@ A carga horária é de mais de 64 horas no total, cobrindo os seguintes tópicos
 - Projeto 1: Game;
 - Projeto 2: Mercado;
 - Projeto 3: Banco;
+
+
+A medida que for concluindo mais seções, o diretório será atualizado.
