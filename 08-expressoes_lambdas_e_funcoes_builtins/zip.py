@@ -1,7 +1,7 @@
 """
 Zip
 
-zip() --> Cria um iteravel chamado zip object que recebe como entrada os elemento de cada um dos iteraveis, e retorna
+zip() --> Cria um iterável chamado zip object que recebe como entrada os elemento de cada um dos iteráveis, e retorna
          esses elementos em pares
 
 
@@ -22,8 +22,8 @@ print(dict(zip(lista_1, lista_2)))
 OBS: Assim que o objeto for convertido em algum tipo de dado ele e excluido da memoria
      o mesmo ocorreu com o map, filter e o generator.
 
-O zip utiliza como parametro o comprimento (len) do menor iteravel. Se o iteravel tiver tamanhos diferentes
-a quantidade de pares formados sera correspondente ao numero de elementos do menos iteravel. Veja o exemplo abaixo.
+O zip utiliza como parâmetro o comprimento (len) do menor iterável. Se o iterável tiver tamanhos diferentes
+a quantidade de pares formados sera correspondente ao numero de elementos do menos iterável. Veja o exemplo abaixo.
 
 print(list(zip(lista_1, lista_2, 'abcde')))
 print(tuple(zip(lista_1, lista_2, 'abcde')))
@@ -50,7 +50,7 @@ print(list(zip(*dados)))
 
 
 # ----------- Exemplos mais complexos ---------
-# O zip e util para juntar varios dados
+# O zip e util para juntar vários dados
 prova1 = [80, 91, 78]
 prova2 = [98, 99, 45]
 alunos = ('Maria', 'Calos', 'Joanna')
