@@ -1,0 +1,7 @@
+This is a text file for test.
+This is another text line.
+I am studying at Geek University, and I am learning a lot about Python.
+I am taking the course Python Programming: Essentials.
+The course is helping me to become an expert in python.
+An eighth line on the text.
+One more dummy text line.
