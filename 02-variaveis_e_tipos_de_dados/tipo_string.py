@@ -1,4 +1,4 @@
-""":cvar
+"""
 Tipo string - vetores de characters
 Em python, um dado e considerado do tipo string sempre que:
 
@@ -9,8 +9,8 @@ Em python, um dado e considerado do tipo string sempre que:
 # - Estiver entre aspas duas triplas -> """uma string"""/ """1234""" / """true"""
 
 """
-nome = 'Carlene'
-nome1 = "Carlene's computer"
+nome = 'John Doe'
+nome1 = "John's computer"
 print(nome1)
 print(type(nome1))
 print(dir(nome1))
@@ -35,4 +35,3 @@ print(nome.split()[1])
 print(nome[::-1])
 print(nome.replace('G', 'P'))
 print(type(nome))
-

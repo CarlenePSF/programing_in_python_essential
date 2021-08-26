@@ -5,15 +5,15 @@ Serve tambem para iterar sobre sequencias
 Foma geral
 
 while express_booleana:
-    //execusao do loop
+    //execução do loop
 
 
 OBS: Em um loop while e importante tomar cuidado com o criterio de parada
 
 
 O loop sera repetido enquanto a expressao booleana for verdadeira .
-Uma expressao booleana e uma expressao onde todo o resultado e verdadeiro ou falso.
-Eemplo:
+Uma expressao booleana é uma expressao onde o resultado e verdadeiro ou falso.
+Exemplo:
 num = 5
 num <5 -> Falso
 num == 5 True

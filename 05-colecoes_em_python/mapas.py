@@ -1,9 +1,9 @@
 """
 Mapas -> conhecidos em python como dicionarios
 
-Dicionarios em python sao representados por chaves{}
+Dicionarios em python são representados por chaves{}
 
-# como iterar sobre dicionarios
+# Como iterar sobre dicionarios
 
 dictionary = {
     'a': 1,
@@ -20,7 +20,7 @@ for chave in dictionary:
 for chave in dictionary:
     print(f'Na chave {chave} esta o valor {dictionary[chave]}')
 
-# acessando chaves
+# Acessando chaves
 
 print(dictionary)
 print(dictionary.keys())
@@ -40,7 +40,7 @@ for valor in dictionary.values():
 print(dictionary.items())
 
 for chave, valor in dictionary.items():
-    print(f'chave = {chave} e valor = {valor}')
+    print(f' chave = {chave} e valor = {valor}')
 
 """
 # Soma*, valor max*, valor mim*, tamanho

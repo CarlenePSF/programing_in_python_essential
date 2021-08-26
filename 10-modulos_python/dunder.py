@@ -57,6 +57,6 @@ print(funcao3())
 
 from primeiro import funcao_um
 from segundo import funcao_dois
-import numpy as np
+# import numpy as np
 funcao_um()
 funcao_dois()

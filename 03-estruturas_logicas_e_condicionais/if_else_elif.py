@@ -21,8 +21,8 @@ if( idade <18){
      System.out.println('Maior de idade');
 }
 
-
 """
+# Em Python
 
 idade = int(input('digite a idade: '))
 
@@ -34,4 +34,3 @@ elif idade == 18:
 else:
     print('Maior de idade!')
     print(idade)
-

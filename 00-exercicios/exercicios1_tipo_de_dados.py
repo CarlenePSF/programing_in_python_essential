@@ -1,4 +1,4 @@
-""":cvar
+"""
 Lista d exercicios sobre tipos de dados
 """
 
@@ -19,7 +19,7 @@ print(f'{num2}')
 #-------------------------------------------------
 # Exercicio numero 3
 #-------------------------------------------------
-a = input('difite um valor para a:')
+a = input('digite um valor para a:')
 b = input('digite um valor para b:')
 c = input('digite um valor para c:')
 soma = int(a) + int(b) + int(c)             # nao esquecer de fazer o casting dos valores digitados no input()
@@ -152,7 +152,7 @@ cm = input('digite o comprimento em centimetros:')
 #casting para transformar o valor do input em real
 cm = float(cm)
 pol = cm / 2.54                      # formula para converter
-print(f'O comprimento de {cm} centrimetros equivale a {pol} em polegadas.')
+print(f'O comprimento de {cm} centimetros equivale a {pol} em polegadas.')
 
 
 #-----------------------------------------------------
@@ -202,14 +202,14 @@ real = real / dollar
 print('O valor convertido total sera de %f dolares' % (real))
 
 #---------------------------------------------------
-# EXercicio 31
+# Exercicio 31
 #---------------------------------------------------
 num = int(input('Digite um valor numerico?'))
 print(f'O antecessor e o sucessor de {num} sao {num-1} e {num+1}, respectivamente.')
 
 
 #---------------------------------------------------
-# EXercicio 32
+# Exercicio 32
 #---------------------------------------------------
 num = int(input('Digite um valor numerico?'))
 print(f'O sucessor do triplo de {num}  e {num**3 + 1}.')
@@ -217,7 +217,7 @@ print(f'O antecessor do dobro de {num}  e {num**2 - 1}.')
 print(f' A soma de {num**3 + 1} com {num**2 - 1} e igual a {(num **3 + 1) + (num**2 - 1)}')
 
 #---------------------------------------------------
-# EXercicio 33
+# Exercicio 33
 #---------------------------------------------------
 
 lado = float(input('qual o lado do quadrado?'))
@@ -320,7 +320,7 @@ print(f'O salario a receber e {salariobase+gratificacao-imposto}')
 # -----------------------------------------------
 
 
-valortotal = float(input('Qual o valordo produto?'))
+valortotal = float(input('Qual o valor do produto?'))
 desconto = (10/100)*valortotal
 parcelas = int(input('Quantas parcelas?'))
 valorcomparcelamento = (valortotal - desconto)/parcelas
@@ -393,7 +393,7 @@ print("%s tem %s de idade" % (nome, idade))
 x = float(input('Qual a coordenada x?'))
 y = float(input('Qual a coordenada y?'))
 distancia = (x**2 + y**2)**(1/2)
-print(f'A distncia do ponto ({x},{y}) da origem (0,0) e {distancia}')
+print(f'A distância do ponto ({x},{y}) da origem (0,0) e {distancia}')
 """
 
 # ------------------------------------------------

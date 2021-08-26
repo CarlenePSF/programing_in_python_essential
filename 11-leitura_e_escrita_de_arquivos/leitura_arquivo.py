@@ -37,7 +37,7 @@ print(arquivo.read())
 # A linha abaixo não imprimirá o arquivo novamente.
 print(arquivo.read())
 # Concluímos que a função read() lê o conteúdo do arquivo por inteiro
-"""
+
 
 # ---- Exemplo 2 --- tipo de retorno da função read()
 arquivo = open('teste.txt')
@@ -47,4 +47,9 @@ print(type(retorno))  # retorna um tipo string
 print(retorno)
 # print(dir(retorno))
 print(retorno.split('\n'))
+"""
 
+
+# OBS: A função read() aceita como parâmetro um número que define a quantidade de caracteres na string que queremos ler.
+arquivo = open('arquivos_saida/teste.txt')
+print(arquivo.read(100))

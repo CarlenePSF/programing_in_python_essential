@@ -22,9 +22,9 @@ def exponential(num, power=2):
     """
     Função que por padrão retorna a potencia de um numero num elevado à potência power, por padrão 2,
     ou informada pelo usuário
-    :param num:
-    :param power:
-    :return: num ** power
+    param num:
+    param power:
+    return: num ** power
     """
     return num ** power
 

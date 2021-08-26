@@ -37,5 +37,3 @@ nomes = ['julia', 'python', 'java']
 resultado = [str(item[0]).upper() + str(item[1:]) for item in nomes]
 print(lista)
 print(resultado)
-
-

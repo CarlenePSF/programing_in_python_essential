@@ -82,10 +82,12 @@ def diz_oi():
 # ->> A Função não retorna nenhum valor
 
 #Chamando a função
+
+
 diz_oi()
 # ATENÇÃO : Sempre utilizar o parêntese!!
-# ERRADO: >>> diz_oi
-# CORRETO: >>> diz_oi()
+# ERRADO: diz_oi
+# CORRETO: diz_oi()
 
 
 # *** Exemplo 2 -
@@ -105,6 +107,6 @@ def canta_parabens():
 
 # Em python, podemos, inclusive, criar variáveis do tipo de uma função e executar esta função através da variável
 # Note a seguinte passagem de parâmetros
-# No entanto essa forma pode confundir! o indicado é usar o nome de definição da funcção.
+# No entanto essa forma pode confundir! o indicado é usar o nome de definição da função.
 canta = canta_parabens
 canta()

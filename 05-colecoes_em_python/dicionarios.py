@@ -239,8 +239,8 @@ print(dicionario)
 # Ele vai gerar para cada valor do iteravel uma chave
 # e vai distribuir para esta chave  o valor iteravel
 
-outrodict = {}.fromkeys(['nome', 'pontos', 'email', 'profile'], 'desconhecido')
-print(outrodict)
+outro_dict = {}.fromkeys(['nome', 'pontos', 'email', 'profile'], 'desconhecido')
+print(outro_dict)
 
-outrodict1 = {}.fromkeys(range(1, 11), 'novo')
-print(outrodict1)
+outro_dict_1 = {}.fromkeys(range(1, 11), 'novo')
+print(outro_dict_1)

@@ -16,7 +16,7 @@ class CalculadoraCientifica:
     pass
 
 
-[2] - Use names without capitol latter + underline space to funtions or variables
+[2] - Use names without capitol latter + underline space to functions or variables
 def soma():
     pass
 

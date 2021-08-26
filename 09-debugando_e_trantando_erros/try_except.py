@@ -78,10 +78,12 @@ def pega_valor(dicionario, chave):
 
 
 dic = {'nome': 'Geek'}
+# A linha abaixo executa o try
+print(pega_valor(dic, 'nome'))
 
+# As linhas abaixo executam o except
 print(pega_valor(dic, 'game'))
 
 print(pega_valor(7, 'game'))
 
 print(pega_valor(dic, 5))
-

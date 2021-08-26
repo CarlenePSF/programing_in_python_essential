@@ -3,7 +3,7 @@ Tipo Numeric -> o mesmo de (int)
 
 tipo float -> tipo real, decimal casas decimais
 
-Obs: o separador de casas decimanis e o ponto (.)
+Obs: o separador de casas decimais é o ponto (.)
 """
 from math import sqrt
 
@@ -32,9 +32,8 @@ res = int(valor)
 print(res)
 
 
-#complex numbers qualquer numero com unidade imaginaria no python sendo o (j)
+# Complex numbers - qualquer número com unidade imaginaria no python sendo o (j)
 
 var = 2j
 var2 = sqrt(4)
 print(var2)
-

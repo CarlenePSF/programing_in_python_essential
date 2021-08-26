@@ -18,10 +18,10 @@ Lembre-se, tuplas são IMUTÁVEIS!!!!
 def soma_tres_num(num1, num2, num3):
     '''
     #Calcula a soma de 3 números num1, num2 e num3 e retorna o resultado
-    #:param num1:
-    #:param num2:
-    #:param num3:
-    #:return: num1+num2+num3
+    #param num1:
+    #param num2:
+    #param num3:
+    #return: num1+num2+num3
     '''
     return num1+num2+num3
 
@@ -178,7 +178,7 @@ print(soma3(1, 2, 3, 4))
 # O asterisco serve para que informemos ao python que estamos passado como argumento uma coleção de dados
 # Isso informa ao Python que antes de usar os dados ele precisa desempacotá-los
 # vale tanto para listas [] como sets {}
+
+
 lista = {1, 2, 3, 4}
 print(soma3(*lista))
-
-

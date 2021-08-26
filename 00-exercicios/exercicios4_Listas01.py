@@ -1,13 +1,13 @@
 """
 Exercícios de listas, tuplas, dicionário, sets
 """
-# from random import seed
+from random import seed
 # import random
-# import numpy as np
+import numpy as np
 # from math import sqrt
 # seed random number generator
-# np.random.seed(21)
-# seed(25)
+np.random.seed(21)
+seed(25)
 """
 # ---------------------------------
 # Exercício 1 - 

@@ -3,10 +3,10 @@ Escopo de variaveis
 Dois casos de escopo:
 
 1- Variaveis glocais
-    - sao reconhecidas em todo o programa, ou seja, seu escopo compreende todo o programa
+    - são reconhecidas em qualquer programa, ou seja, seu escopo compreende o código inteiro
 2 - Variaveis locais
     - variaveis locais sao reconhecidas apenas no bloco em que foram declaradas, ou seja,
-      seu escopo esta limitado ao bloco onde foram decladas
+      seu escopo esta limitado ao bloco onde foram declaradas
       
 Para declarar variaveis em Python utilizamos a seguinte nomenclatura:
 

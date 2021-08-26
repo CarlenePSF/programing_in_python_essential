@@ -29,10 +29,9 @@ from collections import defaultdict
 
 dicionario = defaultdict(lambda: 0)
 
-dicionario['curso'] = "Programação em Python: Essencial"
+dicionario['curso'] = 'Programação em Python: Essencial'
 # print(dicionario)
 
-# Entrando com uma chave que nao existe no dicionario o KeyError nao sera
-# impresso
+# Entrando com uma chave que nao existe no dicionario o KeyError não sera impresso.
 print(dicionario['outro'])
 print(dicionario)

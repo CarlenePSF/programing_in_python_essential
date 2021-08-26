@@ -1,5 +1,5 @@
 """
-Funções com parâmetro padão (default parameters)
+Funções com parâmetro padrão (default parameters)
 
 - São funções onde a passagem de parâmetro é opcional
 
@@ -70,7 +70,7 @@ Vantagens de definir valores default
  3- Os códigos ficam mais legíveis
 
 
-# Quais tipos de dados podemos usar como parâmetro padão?
+# Quais tipos de dados podemos usar como parâmetro padrão?
 #>>> Qualquer tipo de dado pode ser usado!
 
 Entre eles:

@@ -72,8 +72,7 @@ s = {99, 2, 34, 23, 2, 12, 1, 44, 5, 34}
 print(s)
 print(type(s), len(s))
 
-# Assim como todo outro conjunto python, podemos
-colocar tipos de dados misturados em sets
+# Assim como qualquer conjunto, em python podemos colocar tipos de dados misturados em sets
 
 s = {1, 2, 3, 'b', True, False, 'Geek'}
 print(s)
@@ -232,11 +231,10 @@ print(f'{curso_python == so_python.union(comum2)}')
 
 # Soma*, valor maximo*, valor minimo*, tamanho
 # somente se os valores forem inteiros ou reais (float)
+"""
 conjunto = {1, 3, 5, 7, 9}
 
 print(sum(conjunto))
 print(max(conjunto))
 print(min(conjunto))
 print(len(conjunto))
-
-"""

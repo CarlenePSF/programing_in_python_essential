@@ -1,8 +1,8 @@
 """
 Recebendo dados do usuário
-input() -> Todo dado recebido via input e uma string
+input() -> qualquer dado recebido via input é uma string
 
-Em python, uma string e tudo que estiver entre
+Em python, uma string é tudo que estiver entre
 - Aspas simples;
 - Aspas duplas;
 - Aspas simples triplas;
@@ -47,7 +47,7 @@ print( "%s tem %s de idade" % (nome, idade))
 #exemplo de print moderno
 print{'A {0} tem {1} anos'.format(nome,idade)}
 
-''':cvar
+'''
 int(idade) => cast 
 Cast e a conversao de um tipo de dado para outro
 '''
@@ -56,10 +56,9 @@ print(f'A {nome} nasceu em {2021- int(idade)}')
 
 """
 
-""":cvar
+"""
 #De forma resumida, o programa para receber dados poderia ser escrito como abaixo
 """
-
 
 
 nome = input('Qual seu nome?')
@@ -67,4 +66,3 @@ print(f'Seja bem-vindo(a) {nome}!')
 idade = input('Qual a sua idade?')
 print(f'A {nome} nasceu em {2021- int(idade)} e tem {idade} anos ')
 print("%s tem %s de idade" % (nome, idade))
-

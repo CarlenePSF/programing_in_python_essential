@@ -1,4 +1,4 @@
-""":cvar
+"""
 Estruturas logicas: and (e), or (ou), not (não), is(é)
 
 operadores unários:
@@ -37,6 +37,3 @@ elif ativo is True or logado is False:
 
 elif ativo is False or logado is True:
     print('Bem-vindo!')
-
-
-

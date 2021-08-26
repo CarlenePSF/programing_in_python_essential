@@ -139,28 +139,25 @@ meses1 = ('janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', '
 
 tupla2 = meses1[1: 12: 2]
 print(tupla2)
+"""
 
-
-#-------------------------------------
+# -------------------------------------
 # Porque Utilizar tuplas, então?
-#-------------------------------------
-
-1 - Tuplas são mais rápidas do que listas
-2- tuplas deixam o código mais seguro, pois trabalhar com elementos imutáveis traz mais segurança para o código!
+#
+# 1 - Tuplas são mais rápidas do que listas
+# 2 - Tuplas deixam o código mais seguro, pois trabalhar com elementos imutáveis traz mais segurança para o código!
+# -------------------------------------
 
 
 # Copiando uma tupla para outra
 tupla = (1, 2, 3, 4, 5)
-#print(tupla)
+print(tupla)
 
 nova = tupla
-#print(nova)
-#print(tupla)
+print(nova)
 
 
 # IMPORTANTE: Na tupla não tem problema de shallow copy
 outra = nova
 nova = nova + outra
 print(nova)
-"""
-
