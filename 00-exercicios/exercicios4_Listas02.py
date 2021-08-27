@@ -9,7 +9,7 @@ import numpy as np
 np.random.seed(25)
 # seed(25)
 
-DIM = 3
+DIM = 4
 
 # Gerando uma matriz aleatória (lista aninhada) para usar nos exercícios
 
@@ -184,7 +184,8 @@ print(matriz(3))
 # Exercício - Calcular a soma dos elementos que estão:
 # (8) acima da diagonal principal;
 # (9) abaixo  da diagonal principal;
-# (10) na diagonal principal.
+# (10) na diagonal principal;
+# (11) diagonal secundária.
 # ----------------------------------------------------------------
 
 
@@ -195,7 +196,7 @@ print('\n')
 principal = []
 acima = []
 abaixo = []
-
+secundaria = []
 for m1 in range(DIM):
     for m2 in range(DIM):
         if m1 < m2:
@@ -204,19 +205,15 @@ for m1 in range(DIM):
             abaixo.append(m[m1][m2])
         elif m1 == m2:
             principal.append(m[m1][m2])
+        if m2 == DIM - 1 - m1:
+            secundaria.append(m[m1][m2])
 
 
 print(f'Os elementos acima da diagonal principal são {acima}.', f'Sua soma é {sum(acima)}')
 print(f'Os elementos da diagonal principal são {principal}', f'A sua soma é {sum(principal)}')
 print(f'Os elementos abaixo da diagonal principal são {abaixo}.', f'A soma deles é {sum(abaixo)}')
-
-# --------------------------------------------------------------------
-# Exercício 11 - Soma dos elementos que estão numa diagonal secundária
-# --------------------------------------------------------------------
-
-secundaria = []
-for m1 in range(DIM):
-    for m2 in range(DIM):
-        if m2 == m1+1:
-            secundaria.append(m[m1][m2])
 print(f'Os elementos da diagonal secundária  são {secundaria}.', f'A soma deles é {sum(secundaria)}')
+
+# --------------------------------------------------------------------
+# Exercício 12 -
+# --------------------------------------------------------------------
