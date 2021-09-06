@@ -1,13 +1,21 @@
 """
 Exercícios 02 - listas, tuplas, dicionário, sets
+
+OBS: Como essa lista é mais focada em matrizes - listas aninhadas em python- vamos utilizar a biblioteca
+numpy, específica para trabalhar com arrays multidimensionais
+
 """
 # from random import seed
 # import random
+# from collections import Counter
+# from random import sample
+from random import seed
 import numpy as np
+# import pandas as pd
 # from math import sqrt
 # seed random number generator
 np.random.seed(25)
-# seed(25)
+seed(25)
 
 DIM = 4
 
@@ -187,7 +195,7 @@ print(matriz(3))
 # (10) na diagonal principal;
 # (11) diagonal secundária.
 # ----------------------------------------------------------------
-
+"""
 
 m = gera_matrix(DIM)
 print(m)
@@ -213,7 +221,100 @@ print(f'Os elementos acima da diagonal principal são {acima}.', f'Sua soma é {
 print(f'Os elementos da diagonal principal são {principal}', f'A sua soma é {sum(principal)}')
 print(f'Os elementos abaixo da diagonal principal são {abaixo}.', f'A soma deles é {sum(abaixo)}')
 print(f'Os elementos da diagonal secundária  são {secundaria}.', f'A soma deles é {sum(secundaria)}')
+"""
 
 # --------------------------------------------------------------------
-# Exercício 12 -
+# Exercício 12 - Transpondo uma matriz
 # --------------------------------------------------------------------
+"""
+matrix = gera_matrix(3)
+print(matrix.shape)
+print(matrix)
+matrix = matrix.transpose()
+print(matrix)
+"""
+
+
+# --------------------------------------------------------------------
+# Exercício 13 - Matriz triangular inferior
+# --------------------------------------------------------------------
+'''
+def triangular_inferior(n):
+    """
+    Transforma uma matriz de dim nxn cujas entradas são numeros no intervalo de 1-20
+    numa triangular inferior.
+    """
+    m = np.random.randint(1, 20, size=(n, n))
+    print(m)
+    for m1 in range(n):
+        for m2 in range(n):
+            if m1 < m2:
+                m[m1][m2] = 0
+    return m
+
+
+print(triangular_inferior(4))
+'''
+
+# --------------------------------------------------------------------
+# Exercício 14- uma cartela de bingo
+# --------------------------------------------------------------------
+"""
+# verificando se os elementos sorteados não se repetem
+
+
+def frequency_table(conjunto):
+    unique, counts = np.unique(conjunto, return_counts=True)
+    data = {'elementos': unique, 'frequencia': counts}
+    return pd.DataFrame.from_dict(data, orient='columns')
+
+
+cartela = []
+
+sorteados = sample(range(0, 99), 25)
+print(sorteados)
+print(frequency_table(sorteados))
+
+# construindo a cartela
+for i in range(5):
+    cartela.append(sorteados[i*5:5*i+5])
+print(cartela)
+"""
+
+# --------------------------------------------------------------------
+# Exercício 15- Construtor de gabarito
+# --------------------------------------------------------------------
+
+numero_questoes = 10
+numero_alunos = 5
+
+
+def respostas_alunos(num_questions, num_alunos):
+    respostas = []
+    for _ in range(num_alunos):
+        res = [input(f'digite as respostas da questão {_+1}: ') for _ in range(num_questions)]
+        respostas.append((f'aluno {_ + 1}', res))
+    return respostas
+
+
+def gabarito(num_questions):
+    return 'Gabarito', [input(f'Digite o gabarito da questão {_+1}: ') for _ in range(num_questions)]
+
+
+Gabarito = gabarito(numero_questoes)
+print('\n')
+Respostas = respostas_alunos(numero_questoes, numero_alunos)
+
+
+pontuacao = []
+for i in range(numero_alunos):
+    pontos = 0
+    for j in range(numero_questoes):
+        if Respostas[i][1][j] == Gabarito[1][j]:
+            pontos += 1
+        else:
+            continue
+    pontuacao.append(f'O aluno {i+1} fez {pontos} pontos')
+
+for i in range(numero_alunos):
+    print(f'{pontuacao[i]}.')

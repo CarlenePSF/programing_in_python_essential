@@ -39,6 +39,7 @@ No final, reduce() irá retornar o resultado final.
 De maneira alternativa, podemos ver a função reduce() como uma função composta
 funcao( funcao(...(...funcao(funcao(a1, a2),a3), a4))..., an-1),  an)
 """
+
 # exemplo na prática
 # multiplicando todos os números de uma lista com o reduce()
 
