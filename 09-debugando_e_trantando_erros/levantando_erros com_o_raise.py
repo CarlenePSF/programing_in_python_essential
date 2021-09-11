@@ -47,5 +47,3 @@ colore('Geek', 'amarelo')
 
 # levando o ValueError
 colore('Geek', 'vermelho')
-
-

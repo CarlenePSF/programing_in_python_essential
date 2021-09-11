@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-class Points:
+class Distance:
     """
     Methods:
     ---------------------
@@ -60,3 +60,13 @@ class Points:
         plt.ylim([-maxes[1], maxes[1]])  # set the y axis limits
         plt.grid(b=True, which='major')
         plt.show()
+
+
+# A linha abaixo só será executada se o script classe.py for executado como main
+if __name__ == '__main__':
+    ponto = Distance(-2.0, -1.0, 1.0, 2.0)
+    ponto.display_points()
+    print(ponto.calculate_distance())
+    ponto.plot_vetores2d()
+else:
+    print('O módulo Points foi importado com sucesso!')
