@@ -1,7 +1,8 @@
 """
 Trabalhando com dicionários
 Em alguma linguagens de programação, os dicionários python são
-conhecidos por mapas.py
+conhecidos por mapas
+
 
  - Dicionarios são coleções do tipo chave/valor
  - No dicionarios o conjunto chave/valor fica explicito!!
