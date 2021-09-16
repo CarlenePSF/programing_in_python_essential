@@ -320,8 +320,7 @@ print(potencia(2, 3))
 # --------------------------------------------------
 # Exercício 19 - Maior fator primo de um número
 # --------------------------------------------------
-
-
+"""
 def maximo_fator_primo(num):
     fator = 2
     while fator < num:
@@ -331,6 +330,61 @@ def maximo_fator_primo(num):
 
 
 maximo_fator_primo(3)
+"""
+# --------------------------------------------------
+# Exercício 20 - função fatorial
+# --------------------------------------------------
+
+'''
+def factorial(n):
+    """
+    Calculate the factorial of a positive number n
+    :param n: int
+    :return: factorial of n
+    """
+    count = n
+    fac = []
+    prod = 1
+    n0, n1 = n, n - 1
+    while count >= 1:
+        fac.append(n0)
+        count -= 1
+        n0, n1 = n1, n1 - 1
+
+    for _ in range(len(fac)):
+        prod = prod*fac[_]
+    print(fac, prod)
+
+
+factorial(15)
+'''
+
+# ----------------------------------------------------------------------
+# Exercício 21 - Quantidade de números primos abaixo de uma certo valor
+# ---------------------------------------------------------------------
+
+
+# ----------------------------------------------------------------------
+# Exercício 22
+# ---------------------------------------------------------------------
+
+def exclamacao(n):
+    count = 0
+    while count <= n:
+        print('!'*count)
+        count += 1
+
+
+exclamacao(10)
+
+# ----------------------------------------------------------------------
+# Exercício 22
+# ---------------------------------------------------------------------
+
+
+# def triangle():
+
+
 # --------------------------------------------------
 # Exercício extra -  probabilidades
 # --------------------------------------------------

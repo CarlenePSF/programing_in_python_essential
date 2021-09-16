@@ -5,13 +5,14 @@ OBS: Como essa lista é mais focada em matrizes - listas aninhadas em python- va
 numpy, específica para trabalhar com arrays multidimensionais
 
 """
+# import matplotlib.pyplot as plt
 # from random import seed
 # import random
 # from collections import Counter
 # from random import sample
 from random import seed
 import numpy as np
-# import pandas as pd
+import pandas as pd
 # from math import sqrt
 # seed random number generator
 np.random.seed(25)
