@@ -10,7 +10,9 @@ criar variáveis do tipo de funções nos nossos programas.
 # OBS: Isso já foi utilizado e discutido inicialmente na seção de funções
 
 
-Em Python, as funções são entidades de primeira classe (first class functions)
+Em Python, as funções são cidadãos de primeira classe (first class citizens).
+Isso significa que elas suportam operações como sendo passadas como um argumento que é
+retornado de uma função, modificado e atribuído à uma variável.
 
 
 # Exemplo - Definimos as funções
@@ -71,7 +73,7 @@ from random import choice
 
 def faz_me_rir():
     def rir():
-        return choice(('hahahahahaha', 'kkkkkkkkkkkk','yayayayayaya'))
+        return choice(('hahahahahaha', 'kkkkkkkkkkkk', 'yayayayayaya'))
     return rir()
 
 
@@ -86,7 +88,7 @@ from random import choice
 
 def faz_me_rir_novamente(pessoa):
     def dando_risada():
-        risada = choice(('hahahahahaha', 'kkkkkkkkkkkk','yayayayayaya'))
+        risada = choice(('hahahahahaha', 'kkkkkkkkkkkk', 'yayayayayaya'))
         return f'{risada} {pessoa}'
     return dando_risada
 
