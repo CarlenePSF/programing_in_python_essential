@@ -23,8 +23,9 @@ Método são escritos em letras minúsculas, assim como funções, se o nome for
 palavras separadas por underline.
 
 
-# ----------------  Exemplos de classes
+# -------------  Exemplos de métodos de instância
 
+# Exemplo 1 -
 
 class Lampada:
 
@@ -45,9 +46,7 @@ class ContaCorrente:
         self.__saldo = saldo
         ContaCorrente.contador = self.__numero
 
-
-# ----------------- Classe produto
-
+# Exemplo 2 -
 
 class Produto:
 
@@ -74,8 +73,7 @@ print(p1.desconto(20))  # somente o desconto
 print(Produto.desconto(p1, 20))  # self, desconto
 
 
-# ---------------- Classe usuário
-
+# Exemplo 3 -
 
 class Usuario:
 
@@ -102,27 +100,10 @@ print(user2.nome_completo())
 # print(f'Senha User 1: {user1._Usuario__senha}')  # Acesso de forma errada de um atributo de classe
 # print(f'Senha User 2: {user2._Usuario__senha}')  # Acesso de forma errada de um atributo de classe
 
-***** Awesome tips I found on https://www.freecodecamp.org/news/python-property-decorator/
-'''Specifically, you can define three methods for a property which is private:
 
-* A getter - to access the value of the attribute.
-* A setter - to set the value of the attribute.
-* A deleter - to delete the instance attribute.
-
-Some final Tips:
- - You don't necessarily have to define all three methods for every property.
- - You can define read-only properties by only including a getter method.
- - You could also choose to define a getter and setter without a deleter.
- - If you think that an attribute should only be set when the instance is created or that
- it should only be modified internally within the class, you can omit the setter.
-
-You can choose which methods to include depending on the context that you are working with.'''
-"""
-# Exemplo
-# ************* Criando senhas criptografadas *************
+# Exemplo 4 - Criando senhas criptografadas
 
 from passlib.hash import pbkdf2_sha256 as cryp
-
 
 class Usuario:
 
@@ -182,3 +163,128 @@ else:
     print('Acesso negado.')
 
 print(f'Senha user1: {user1.senha}')
+
+
+ # --------- Awesome tips I found on https://www.freecodecamp.org/news/python-property-decorator/
+'''Specifically, you can define three methods for a property which is private:
+
+* A getter - to access the value of the attribute.
+* A setter - to set the value of the attribute.
+* A deleter - to delete the instance attribute.
+
+Some final Tips:
+ - You don't necessarily have to define all three methods for every property.
+ - You can define read-only properties by only including a getter method.
+ - You could also choose to define a getter and setter without a deleter.
+ - If you think that an attribute should only be set when the instance is created or that
+ it should only be modified internally within the class, you can omit the setter.
+
+You can choose which methods to include depending on the context that you are working with.'''
+
+
+
+# *********** Métodos de classe ****************
+
+Os métodos de classe diferem dos métodos de instância pois não estão vinculados em nenhuma instância da classe
+mas diretamente à classe.
+Na declaração desses métodos, usamos um decorator antes de declará-los.
+
+
+
+# Exemplo de método de classe - refatorando nossa classe Usuário para senha criptografada
+
+from passlib.hash import pbkdf2_sha256 as cryp
+
+
+class Usuario:
+
+    contador = 0  # atributo de classe
+
+    def __init__(self, nome, sobrenome, email, senha):  # atributos de instância
+        self.__id = Usuario.contador + 1
+        self.__nome = nome
+        self.__sobrenome = sobrenome
+        self.__email = email
+        self.__senha = cryp.hash(senha, rounds=200000, salt_size=16)
+
+    # getters
+    @property
+    def nome(self):
+        return self.__nome
+
+    @property
+    def sobrenome(self):
+        return self.__sobrenome
+
+    @property
+    def email(self):
+        return self.__email
+
+    @property
+    def senha(self):
+        return self.__senha
+
+    @classmethod  # Decorador para indicar o método de classe
+    def conta_usuario(cls):  # O parâmetro é a própria classe
+        print(f'Temos {cls.contador} usuário no sistema.')
+        # print(f'Classe: {cls}')
+
+    def nome_completo(self):  # forma correta
+        return f'{self.__nome} {self.__sobrenome}'
+
+    def checa_senha(self, senha):
+        if cryp.verify(senha, self.__senha):
+            return True
+        return False
+
+
+# Testando o acesso ao método
+
+user01 = Usuario('John', 'Doe', 'Johndoe@gmail.com', '123fool')
+
+Usuario.conta_usuario()  # forma correta de acessar o método
+user01.conta_usuario()  # forma possível, mas incorreta
+
+
+# Quando utilizar cada tipo de método ou cada tipo de atributo atributo??
+# Métodos de instância =>> acessar atributos de instância
+# Métodos de classe =>> acessar atributos de classe
+
+# OBS: Métodos de classe em Python são conhecidos como métodos estáticos em outras linguagens.
+
+# ************* Métodos privados ******************
+São métodos que só podem ser acessados dentro da classe a qual pertencem
+"""
+# Exemplo
+
+
+class PegaEmail:
+
+    def __init__(self, email):
+        self.__email = email
+        print(f'Email criado: {self.__gera_usuario()}')  # imprime no instante em que o objeto é criado.
+
+    @property
+    def email(self):
+        return self.__email
+
+    @staticmethod   # Outro tipo de método estático
+    def definicao():
+        return 'UXR344'
+
+    # Método privado - acesso somente dentro da classe
+    def __gera_usuario(self):  # Só será acessado dentro da classe
+        return self.__email.split('@')[0]
+
+
+email1 = PegaEmail('Johndoe@gmail.com')
+print(email1.email)
+
+# Se tentarmos acessar o método fora da classe obtemos um AttributeError
+# print(email1.__gera_usuario())  # possivelmente Error
+
+# Acesso de forma ruim
+# print(email1._PegaEmail__gera_usuario())  # acesso de forma ruim, mas possível.
+
+# acessando o método estático @staticmethod
+print(PegaEmail.definicao())
