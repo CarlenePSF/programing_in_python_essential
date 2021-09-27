@@ -12,8 +12,8 @@ A carga horária é de mais de 64 horas no total, cobrindo os seguintes tópicos
 - Debugar seu código e tratar erros;
 - Módulos;
 - Leitura e Escrita em arquivos; 
-- Iteradores e Geradores;
-- Decorators;
+- Iterators (iteradores) e  Generators (geradores);
+- Decorators (decoradores);
 - Orientação a Objetos;
 - Herança e Polimorfismo;
 - Manipulação de Arquivos CSV e JSON;
