@@ -15,7 +15,7 @@ A carga horária é de mais de 64 horas no total, cobrindo os seguintes tópicos
 - Iteradores e Geradores;
 - Decorators;
 - Orientação a Objetos;
-- Herança e Polimorfismo;
+- Herança e Polimorfismo; (Estou aqui!)
 - Manipulação de Arquivos CSV e JSON;
 - Data e Horas;
 - Testes;
