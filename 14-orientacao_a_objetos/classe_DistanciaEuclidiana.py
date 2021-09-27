@@ -1,6 +1,6 @@
 """
 Name: Class_euclidean_distances.
-Author: CPSdeFarias
+Author: CPSFarias
 """
 
 from math import sqrt
@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-class Distance:
+class EuclideanDistance:
     """
     Calculates the euclidean distances between two points and
     draw the corresponding vectors
@@ -78,13 +78,13 @@ class Distance:
         plt.show()
 
 
-# A linha abaixo só será executada se o script exemplo_classe.py for executado como main
+# A linha abaixo só será executada se o script classe_DistanciaEuclidiana.py for executado como main
 if __name__ == '__main__':
-    ponto = Distance(-2.0, -1.0, 1.0, 2.0)
+    ponto = EuclideanDistance(-2.0, -1.0, 1.0, 2.0)
     ponto.display_points()
     print(ponto.calculate_distance())
     ponto.plot_vetores2d()
 
     print(ponto.x0)
 else:
-    print('O módulo Points foi importado com sucesso!')
+    print('The EuclideanDistance class was imported successfully.')
