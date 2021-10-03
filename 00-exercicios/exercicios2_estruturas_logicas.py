@@ -4,10 +4,10 @@ Lista de exercícios : estruturas lógicas
 -> uso de and, or, not, is
 
 """
-#from math import log
-#from math import sqrt
-#from random import seed
-#from random import randint
+# from math import log
+# from math import sqrt
+# from random import seed
+# from random import randint
 
 """
 #------------------------------------------------------

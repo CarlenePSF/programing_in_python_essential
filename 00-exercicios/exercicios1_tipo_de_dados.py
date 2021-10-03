@@ -1,42 +1,43 @@
 """
-Lista d exercicios sobre tipos de dados
+Lista de exercicios sobre tipos de dados
 """
 
+# -------------------------------------------------
+# Exercicio numero 1 - imprime um número inteiro
+# -------------------------------------------------
+
+# num_inteiro: int = int(input('Digite um número inteiro: '))
+# print(f'O número inserido foi {num_inteiro}.')
+
+# -------------------------------------------------
+# Exercicio numero 2 - imprime um número real
+# -------------------------------------------------
+
+# num_real: float = float(input('digite um número real: '))
+# print(f'O número inserido foi {num_real}')
+
+# -------------------------------------------------
+# Exercicio numero 3 - soma três valores inteiros
+# -------------------------------------------------
+
+# a: int = int(input('digite um valor para a: '))
+# b: int = int(input('digite um valor para b: '))
+# c: int = int(input('digite um valor para c: '))
+# soma = a+b+c
+# print(f'A soma de {a} + {b} + {c} e igual a {soma}')
+
+
+# ----------------------------------------------
+# Exercicio 4 - quadrado de um número real
+# -----------------------------------------------
+# num = input('Digite um numero real: ')
+# nume_real: float = float(num)  # cast
+# print(f'O quadrado de {num} e %f' % (nume_real*nume_real))  # precisando casas decimais
+# print(f'O quadrado de {num} e {nume_real*nume_real}')  # arredonda as casas decimais
 
 """
-#-------------------------------------------------
-# Exercicio numero 1
-#-------------------------------------------------
-num = 1
-print(f'{num}')
-
-#-------------------------------------------------
-# Exercicio numero 2
-#-------------------------------------------------
-num2=3.4
-print(f'{num2}')
-
-#-------------------------------------------------
-# Exercicio numero 3
-#-------------------------------------------------
-a = input('digite um valor para a:')
-b = input('digite um valor para b:')
-c = input('digite um valor para c:')
-soma = int(a) + int(b) + int(c)             # nao esquecer de fazer o casting dos valores digitados no input()
-print(f'A soma de {a} + {b} + {c} e igual a {soma}')
-
-
 #------------------------------------------------
-# Exercicio 4
-#-----------------------------------------------
-num = input('digite um numero real:')
-sqrt = float(num)
-print(f'O quadrado de {num} e %f' % (sqrt*sqrt))
-print(f'O quadrado de {num} e {sqrt*sqrt}')
-
-
-#------------------------------------------------
-# Exercicio 5
+# Exercicio 5 - a quinta parte de um número
 #-----------------------------------------------
 
 num = input('digite um numero real:')
@@ -44,44 +45,48 @@ quinta = float(num)/5
 print(quinta)
 
 
-#------------------------------------------------
-# Exercicio 6
-#-----------------------------------------------
+# ----------------------------------------------
+# Exercicio 6 - Converte Celsius em Fahrenheit
+# -----------------------------------------------
 temC = input('digite a temperatura em Celsius:')
 TC = float(temC)                  #casting para transformar o valor do input em real
 TF = TC * (9.0/5.0) + 32.0        # formula para converter
 print(f'A temperatura em Fahrenheit e {TF}.')
 
 
-#------------------------------------------------
-# Exercicio 7
-#-----------------------------------------------
+# ----------------------------------------------
+# Exercicio 7 - Converte Fahrenheit em Celsius
+# -----------------------------------------------
+
 temF = input('digite a temperatura em Fahrenheit:')
 TF = float(temF)                  #casting para transformar o valor do input em real
 TC= 5.0 * (TF -32) / 9.0          # formula para converter
 print(f'A temperatura em Celsius e {TC}.')
 
 
-#------------------------------------------------
-# Exercicio 8
-#-----------------------------------------------
+# ----------------------------------------------
+# Exercicio 8 - Converte Kelvin an Celsius
+# -----------------------------------------------
+
 temK = input('digite a temperatura em Kelvin:')
 TK = float(temK)                  #casting para transformar o valor do input em real
 TC= TK - 273.15          # formula para converter
 print(f'A temperatura em Celsius e {TC}.')
 
 
-#------------------------------------------------
-# Exercicio 9
-#-----------------------------------------------
-temC = input('digite a temperatura em Celsius:')
-TC = float(temC)                  #casting para transformar o valor do input em real
-TK= TC + 273.15          # formula para converter
-print(f'A temperatura em Kelvin e {TK}.')
+# ----------------------------------------------
+# Exercicio 9 - converte Celsius em Kelvin
+# -----------------------------------------------
 
-#------------------------------------------------
+tem_C = input('digite a temperatura em Celsius:')
+T_C = float(tem_C)        #casting para transformar o valor do input em real
+T_K= T_C + 273.15          # formula para converter
+print(f'A temperatura em Kelvin e {T_K}.')
+
+# ------------------------------------------------
 # Exercicio 10
-#-----------------------------------------------
+# -----------------------------------------------
+
 K = input('digite uma velocidade em k/h:')
 K = float(K)                  #casting para transformar o valor do input em real
 M =  K/3.6          # formula para converter

@@ -1,7 +1,7 @@
 """
-Exercícios 02 - listas, tuplas, dicionário, sets
+Exercícios 02 - listas, tuples, dicionário, sets
 
-OBS: Como essa lista é mais focada em matrizes - listas aninhadas em python- vamos utilizar a biblioteca
+OBS: Como essa lista tem mais exercícios de matrizes - listas aninhadas em python- vamos utilizar a biblioteca
 numpy, específica para trabalhar com arrays multidimensionais
 
 """
@@ -12,7 +12,7 @@ numpy, específica para trabalhar com arrays multidimensionais
 # from random import sample
 from random import seed
 import numpy as np
-import pandas as pd
+# import pandas as pd
 # from math import sqrt
 # seed random number generator
 np.random.seed(25)
