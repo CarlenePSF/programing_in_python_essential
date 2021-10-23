@@ -2,7 +2,7 @@
 Escopo de variaveis
 Dois casos de escopo:
 
-1- Variaveis glocais
+1- Variaveis globais
     - são reconhecidas em qualquer programa, ou seja, seu escopo compreende o código inteiro
 2 - Variaveis locais
     - variaveis locais sao reconhecidas apenas no bloco em que foram declaradas, ou seja,

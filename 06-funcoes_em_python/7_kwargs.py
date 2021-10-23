@@ -163,6 +163,7 @@ def soma_num(a, b, c):
     print(a+b+c)
 
 
+# em forma de *args
 lista = [1, 2, 3]
 tupla = (1, 2, 3)
 conjunto = {1, 2, 3}
@@ -171,7 +172,9 @@ soma_num(*lista)
 soma_num(*tupla)
 soma_num(*conjunto)
 
-dicio = defaultdict(list)
+# em forma de *kwargs
+
+dic = defaultdict(list)
 dicionario = dict(a=1, b=2, c=3)
 soma_num(**dicionario)
 

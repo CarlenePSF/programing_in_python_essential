@@ -2,15 +2,15 @@
 Entendendo o uso do *args
 
 1 - O *args é um parâmetro como outro qualquer. Isso significa que você poderá chamar de qualquer coisa, desde que
-   comece com
+   comece com asterisco '*'
 
 exemplo:
 *qualquer_coisa
 *X
 
-Por convenção, a comunidade python define o uso *args
-Ao utilizarmos esse parâmetro na função os valores extras informados como entrada são armazenados numa tupla
-Lembre-se, tuplas são IMUTÁVEIS!!!!
+Por convenção, a comunidade python define o uso *args da seguinte maneira:
+Ao utilizarmos esse parâmetro na função, os valores extras informados como entrada serão armazenados numa tupla.
+ ---- Lembre-se: tuplas são IMUTÁVEIS!!!!
 
 
 # Exemplo
