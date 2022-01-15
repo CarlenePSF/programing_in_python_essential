@@ -56,13 +56,13 @@ print(list(map(lambda r: pi * r**2, raios)))
 """
 
 # Exemplo de conversão de temperatura
-Temperaturas_celcius = [('Berlin', 29), ('Rio de Janeiro', 40), ('Cairo', 36), ('São Paulo', 34), ('Los Angeles', 26),
+temperaturas_celcius = [('Berlin', 29), ('Rio de Janeiro', 40), ('Cairo', 36), ('São Paulo', 34), ('Los Angeles', 26),
            ('Londres', 22), ('Amsterdã', 34)]
 
-print(Temperaturas_celcius)
+print(temperaturas_celcius)
 
 # conversão para escala Fahrenheit: F = (9/5) * C + 32.0
-Temperatura_Fahrenheit = lambda dado: (dado[0],  (9/5) * dado[1] + 32.0)
+temperatura_Fahrenheit = lambda dado: (dado[0],  (9/5) * dado[1] + 32.0)
 
-print(list(map(Temperatura_Fahrenheit, Temperaturas_celcius)))
+print(list(map(temperatura_Fahrenheit, temperaturas_celcius)))
 print("\n")

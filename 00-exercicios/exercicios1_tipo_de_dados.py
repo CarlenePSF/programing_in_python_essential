@@ -392,7 +392,7 @@ print(letra_maiuscula.lower())
 # ----------------------------------------------------
 
 """
-numero_inteiro = input('Digite um numero inteiro de três digitos:')
+numero_inteiro = input('Digite um numero inteiro de três digitos: ')
 print(f'o número invertido é {numero_inteiro[::-1]}')
 """
 

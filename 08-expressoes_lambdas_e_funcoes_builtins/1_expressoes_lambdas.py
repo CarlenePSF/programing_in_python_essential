@@ -1,9 +1,9 @@
 """
 Utilizando lambdas
 
-Conhecidas por Expressões lambdas, ou simplesmente lambdas, são funções sem nome, ou seja, funções anonimas.
+Conhecidas por Expressões lambdas, ou simplesmente lambdas, são funções sem nome, ou seja, funções anônimas.
 
-# uma função em Python é definida como abaixo
+# Uma função em Python é definida como abaixo
 
 def soma(a, b):
     return a+b
@@ -31,8 +31,8 @@ print(soma_lambda(5, 3))
 print(soma_lambda(7, 5))
 
 # No entanto, o exemplo acima não é a forma mais adequada de se empregar uma expressão lambda.
-# Nesse caso o preferível seria criar uma função (procedimento). Existem formas mais dignas de se usar
-# uma expressão lambda
+# Nesse caso, o ideal seria criar uma função (procedimento). Existem formas mais dignas de se usar
+# uma expressão lambda.
 
 
 # Podemos ter expressões lambdas com múltiplas entradas. Veja o exemplo abaixo
@@ -45,7 +45,7 @@ nome_completo = lambda nome, sobrenome: nome.strip().title() + ' ' + sobrenome.s
 print(nome_completo(' carlene', 'PAULA'))
 print(nome_completo(' Julius', '  cesar'))
 
-# Em funções Python podemos escrever funções que tenham nenhuma ou várias entradas. Em lambdas também
+# Em funções Python, podemos escrever funções que tenham nenhuma ou várias entradas. Em lambdas também
 
 ama_python = lambda: 'Como não amar o Python?'
 
@@ -112,7 +112,6 @@ print(quadrado(2, 3, 1)(4))
     função que foi declarada como uma expressão lambda.
 """
 
-
 escreve_string = lambda: 'Minha primeira função.'
 
 print(escreve_string())
@@ -123,7 +122,6 @@ print(escreve_string())
 """
 nome = input("Qual o seu nome? ")
 idade = input("Qual a sua idade? ")
-
 
 escreve_string_2 = lambda: f'{nome} possui {idade} anos.'
 print(escreve_string_2())

@@ -4,77 +4,87 @@ Lista de exercícios : estruturas lógicas
 -> uso de and, or, not, is
 
 """
+
 # from math import log
 # from math import sqrt
 # from random import seed
 # from random import randint
 
-"""
-#------------------------------------------------------
+
+# ------------------------------------------------------
 # Exercício 1 - verificando o maior entre dois números
-#------------------------------------------------------
-num1 = float(input('Digite um número:'))
-num2 = float(input('Digite outro numero:'))
+# ------------------------------------------------------
 
-if num1 > num2:
-    print(f'{num1} é maior do que {num2}.')
+"""
+numero_1 = float(input('Digite um número: '))
+numero_2 = float(input('Digite outro numero: '))
+
+if numero_1 > numero_2:
+    print(f'{numero_1} é maior do que {numero_2}.')
 else:
-    print(f'{num2} é maior do que {num1}.')
+    print(f'{numero_2} é maior do que {numero_1}.')
+"""
 
-#-----------------------------------------------------
+# -----------------------------------------------------
 # Exercício 2  - Raiz quadrada de um número positivo 
-#-----------------------------------------------------
+# -----------------------------------------------------
 
-num = float(input('Digite um numero:'))
+"""
+numero = float(input('Digite um numero: '))
 
-if num >= 0:
-    raiz = num**1/2
-    print(f'A raiz quadrada de {num} é {raiz}.')
-elif num < 0:
+if numero >= 0:
+    raiz = numero**1/2
+    print(f'A raiz quadrada de {numero} é {raiz}.')
+elif numero < 0:
     print('Número inválido.')
+"""
 
-#----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 # Exercício 3 - Raiz quadrada de um número positivo e o quadrado de um número negativo
-#----------------------------------------------------------------------------------------
+# ----------------------------------------------------------------------------------------
 
-num = float(input('Digite um numero:'))
+"""
+num = float(input('Digite um numero: '))
 
 if num >= 0:
     raiz = num**1/2
     print(f'A raiz quadrada de {num} é {raiz}.')
 elif num < 0:
     print(f'O quadrado de {num}  é {num*num} ')
+"""
 
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 # Exercício 4 - Raiz quadrada e o quadrado de número estritamente positivo
-#---------------------------------------------------------------------------
+# ---------------------------------------------------------------------------
 
-num = float(input('Digite um numero:'))
+"""
+num = float(input('Digite um numero: '))
 
 if num >= 0:
-    raiz = num**1/2
-    print(f'A raiz quadrada de {num} é {raiz}.')
+    raiz = num ** (1 / 2)
+    print(f'A raiz quadrada de {num} é %.2f' % raiz)
     print(f'O quadrado de {num}  é {num * num} ')
 else:
     print('Número inválido.')
-
-#------------------------------------------------------
+"""
+# ------------------------------------------------------
 # Exercício 5 - verificando se um número é par ou ímpar
-#-----------------------------------------------------
-
-num = float(input('Digite um numero:'))
+# ------------------------------------------------------
+"""
+num = float(input('Digite um numero: '))
 if num % 2 == 0:
     print(f'{num} é par.')
 else:
     print(f'{num} é ímpar.')
+"""
 
-
-#----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 # Exercício 6 - O maior entre dois números e a diferença entre eles
-#----------------------------------------------------------------------
-
+# ----------------------------------------------------------------------
+"""
 a = int(input('Digite um número:'))
 b = int(input('Digite outro número:'))
+
 if a > b:
     print(f'{a} é maior do que {b}.')
     print(f'A diferença ente eles é {a-b}')
@@ -89,6 +99,7 @@ else:
 
 a = int(input('Digite um número:'))
 b = int(input('Digite outro número:'))
+
 if a > b:
     print(f'{a} é maior do que {b}.')
 elif b == a:

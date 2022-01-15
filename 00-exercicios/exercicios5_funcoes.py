@@ -2,11 +2,15 @@
 Lista de exercícios sobre funções
 from math import sqrt, pi
 """
+
 # from math import pi, sqrt
 # from random import randint, seed
+
+
 # ----------------------------------------------------
 # Exercício 1 - função dobro
 # ----------------------------------------------------
+
 '''
 def dobro(num):
     return 2.*num
@@ -123,9 +127,9 @@ T_c = float(input('Type the temperature in Celsius: '))
 print(f'The result of the conversion {convert_Fahrenheit(T_c)} Fº')
 '''
 
-# --------------------------------------------------
+# ------------------------------------
 # Exercício 8 - triangulo retangulo 
-# --------------------------------------------------
+# ------------------------------------
 
 '''
 def hipotenusa(a, b):
