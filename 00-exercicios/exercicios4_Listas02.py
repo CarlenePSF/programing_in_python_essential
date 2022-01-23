@@ -5,7 +5,7 @@ OBS: Como essa lista tem mais exercícios de matrizes - listas aninhadas em pyth
 numpy, específica para trabalhar com arrays multidimensionais
 
 """
-# import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 # from random import seed
 # import random
 # from collections import Counter

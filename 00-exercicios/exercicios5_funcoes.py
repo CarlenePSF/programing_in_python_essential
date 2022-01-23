@@ -369,9 +369,10 @@ factorial(15)
 
 
 # ----------------------------------------------------------------------
-# Exercício 22
+# Exercício 22 - recebe um parâmetro com valor inteiro e gera como saída n
+# linhas com pontos de exclamação
 # ---------------------------------------------------------------------
-
+"""
 def exclamacao(n):
     count = 0
     while count <= n:
@@ -380,14 +381,96 @@ def exclamacao(n):
 
 
 exclamacao(10)
+"""
 
 # ----------------------------------------------------------------------
-# Exercício 22
+# Exercício 23 - gera um triangulo lateral com altura (2n - 1) e n de largura.
+# exemplo n = 4
+# *
+# **
+# ***
+# ****
+# ***
+# **
+# *
 # ---------------------------------------------------------------------
 
+"""
+def triangle(n):
+    count = 0
+    while count <= (2*n)/2:
+        print('*' * count)
+        count += 1
+    count2 = count
+    while count2 >= 1:
+        count2 -= 1
+        print('*' * (count2-1))
 
-# def triangle():
 
+triangle(4)
+"""
+
+# ----------------------------------------------------------------------
+# Exercício 24 - gera um triangulo com lados e altura n
+# e base 2n-1. Exemplo:
+#   *
+#  ***
+# *****
+# ---------------------------------------------------------------------
+
+"""
+def triangle(n):
+    # number of spaces
+    k = n - 1
+
+    # outer loop to handle number of rows
+    for i in range(0, n):
+
+        # inner loop to handle number spaces
+        # values changing acc. to requirement
+        for j in range(0, k):
+            print(end=" ")
+
+        # decrementing k after each loop
+        k = k - 1
+
+        # inner loop to handle number of columns
+        # values changing acc. to outer loop
+        for j in range(0, i + 1):
+            # printing stars
+            print("* ", end="")
+
+        # ending line after each row
+        print("\r")
+
+
+# Driver Code
+triangle(3)
+"""
+
+# -------------------------------------------------------------------------
+# Exercício 25 -  Soma a Serie S = 2/4 + 5/5 + 10/6 + ... + (n**2 +1)/(n+3)
+# -------------------------------------------------------------------------
+
+
+def soma_series(n):
+    serie = [(num ** 2 + 1) / (num + 3) for num in range(1, n+1)]
+    return sum(serie)
+
+
+print(soma_series(2))
+
+
+# -------------------------------------------------------------------------
+# Exercício 25 -  Soma de numeros de 1 até n
+# -------------------------------------------------------------------------
+def soma_ate_n(n):
+    serie = [num for num in range(1, n+1)]
+    # print(serie)
+    return sum(serie)
+
+
+print(soma_ate_n(18))
 
 # --------------------------------------------------
 # Exercício extra -  probabilidades

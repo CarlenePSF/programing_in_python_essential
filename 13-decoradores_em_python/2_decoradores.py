@@ -106,7 +106,7 @@ def seja_educado_mesmo(funcao):   # decorator function
 # função que vamos decorar
 @seja_educado_mesmo  # decorator
 def apresentando():
-    return 'Meu nome é Pedro'
+    print('Meu nome é Pedro')
 
 
 apresentando
