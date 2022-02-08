@@ -27,4 +27,4 @@ A carga horária é de mais de 64 horas no total, cobrindo os seguintes tópicos
 - Projeto 3: Banco;
 
 
-A medida que for concluindo mais seções, o diretório será atualizado.
+A medida que concluir mais seções, o diretório será atualizado.

@@ -1,11 +1,11 @@
 """
-POO - Herança (Inheritance)
+POO — Herança (Inheritance)
 
-A ideia por traz do conceito de herança é a possibilidade de reaproveitar códigos e extender as nossas classes.
+A ideia por trás do conceito de herança é a possibilidade de reaproveitar códigos e extender as nossas classes.
 A partir de uma classe existente, nós podemos extender outra classe que passa a herdar atributos e métodos da classe
 herdade.
 
-um exemplo:
+Exemplo:
 
 class Cliente
    - nome
