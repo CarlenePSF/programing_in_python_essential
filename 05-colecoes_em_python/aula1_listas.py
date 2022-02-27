@@ -333,8 +333,7 @@ print(lista[1:6:2])
 # invertendo valores em uma lista
 # OSB: Para executar essa mesma troca em C seria necessario o uso de ponteiros
 
-nomes = ['
-John', 'Doe']
+nomes = ['Carlene', 'Paula']
 print(nomes)
 
 nomes[0], nomes[1] = nomes[1], nomes[0]
@@ -375,7 +374,7 @@ num1, num2, num3 = lista
 print(num1)
 print(num2)
 print(num3)
-"""
+
 
 # Copia de uma lista para outra (shallow copy and deep copy)
 
@@ -394,7 +393,7 @@ print(nova)
 # Veja que ao utilizarmos .copy() copiamos os dados de uma lista
 # já definida para uma nova lista, que é independente da lista primária
 # Isso em python é chamado de deep copy (ou cópia profunda)
-
+"""
 # Forma 2 - Shallow copy
 
 lista = [1, 2, 3]

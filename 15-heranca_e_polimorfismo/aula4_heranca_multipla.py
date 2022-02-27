@@ -53,10 +53,10 @@ class Animal:
         self.__nome = nome
 
     def cumprimento(self):
-        print(f'Olá! Eu sou {self.__nome}')
+        return f'Olá! Eu sou {self.__nome}.'
 
 
-class Animal_aquatico(Animal):
+class AnimalAquatico(Animal):
 
     def __init__(self, nome):
         super().__init__(nome)
@@ -65,33 +65,34 @@ class Animal_aquatico(Animal):
         return f'{self._Animal__nome} está nadando.'
 
     def cumprimentar(self):
-        return f'Eu sou {self._Animal__nome} do mar.'
+        return f'Eu sou {self._Animal__nome} do mar!'
 
 
-class Animal_terrestre(Animal):
+class AnimalTerrestre(Animal):
 
     def __init__(self, nome):
-        super(Animal_terrestre, self).__init__(nome)
+        super().__init__(nome)
 
     def andar(self):
         return f'{self._Animal__nome} está andando.'
 
     def cumprimentar(self):
-        return f'Eu sou {self._Animal__nome} da terra.'
+        return f'Eu sou {self._Animal__nome} da terra!'
 
 
-class Pinguim(Animal_aquatico, Animal_terrestre):
+class Pinguim(AnimalAquatico, AnimalTerrestre):
+    # a ordem de herança altera como será o comportamento do objeto
 
     def __init__(self, nome):
         super().__init__(nome)
 
 
-baleia = Animal_aquatico('Willy')
+baleia = AnimalAquatico('Willy')
 print(baleia.cumprimentar())
 print(baleia.nadar())
 
 
-gato = Animal_terrestre('Mimi')
+gato = AnimalTerrestre('Mimi')
 print(gato.cumprimentar())
 print(gato.andar())
 
@@ -100,4 +101,12 @@ pinguim = Pinguim('Mamboo')
 print(pinguim.cumprimentar())
 print(pinguim.nadar())
 print(pinguim.andar())
+print(pinguim.cumprimento())
 
+
+# Descobrindo se um objeto é instância de ...
+print(f'pinguim é instância de Pinguin? {isinstance(pinguim, Pinguim)}')
+print(f'pinguim é instância de Animal_terrestre? {isinstance(pinguim, AnimalTerrestre)}')
+print(f'pinguim é instância de Animal_aquatico? {isinstance(pinguim, AnimalAquatico)}')
+print(f'pinguim é instância de Animal? {isinstance(pinguim, Animal)}')
+print(f'pinguim é instância de object? {isinstance(pinguim, object)}')

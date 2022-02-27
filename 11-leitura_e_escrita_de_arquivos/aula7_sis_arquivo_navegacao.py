@@ -1,10 +1,10 @@
 """
- - Sistema de Arquivos - Navegação
+ — Sistema de Arquivos — Navegação
 
 Para fazer uso de manipulação de arquivos do sistema operacional, precisamos importar e fazer uso do modulo
 externo python os.
 
-os -> Operating System - sistema operacional
+os --> Operating System - sistema operacional
 import os
 
 

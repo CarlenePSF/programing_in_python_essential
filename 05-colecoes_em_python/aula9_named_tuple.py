@@ -5,7 +5,7 @@ Modulo collection - Named Tuple
 tupla = (1, 2, 3)
 print(tupla[0])
 
-Named tuple -> São tuples diferenciadas das tuples convencionais, onde especificamos um nome para a mesma
+Named tuple -> São tuplas diferenciadas das tuplas convencionais, onde especificamos um nome para a mesma
                como também parâmetros
 """
 
@@ -51,6 +51,6 @@ print(sucata.raca)
 print(sucata.nome)
 
 # Acessando os dados - forma 3
-# OBS: Todos os atributos de listas/tuples /colecoes/ dicionarios podem ser usados aqui
+# OBS: Todos os atributos de listas/tuplas /colecoes/ dicionarios podem ser usados aqui
 print(sucata.index(2))
 print(sucata.index('bigle'))

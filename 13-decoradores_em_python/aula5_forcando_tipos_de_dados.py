@@ -13,15 +13,15 @@ Ex.:
 Em outras linguagens é comum definir o tipo de dado que a variável poderá armazenar antes de
 atribuir um calor para a mesma.
 Ex. em C:
-    int num = 1                             # tipo inteira
-    float pi = 3.1415                       # tipo float - ponto flutuante
-    char letra = 'c'                        # tipo caractere
-    char frase[100] = 'Isso é uma string'   # tipo string
+    int num = 1 # tipo inteira
+    float pi = 3.1415  # tipo float - ponto flutuante
+    char letra = 'c'  # tipo caractere
+    char frase[100] = 'Isso é uma string'  # tipo string
 
 Porém em alguns casos, é interessante forçar o tipo de dado para uma variável. No python, fazemos isso com o auxílio
 de um decorator.
 
-# -------- Lembrando a função zip -----------
+# ===== Lembrando a função zip =====
 # >>> a = (1, 3, 5)
 # >>> b = (2, 4, 6)
 # >>> print(list(zip(a, b)))

@@ -46,7 +46,7 @@ Se for falso o resultado sera verdadeiro
 print(not ativo1)
 print(not ativo2)
 
-# ou (or)
+#ou (or)
 """
 E uma operacao binaria, ou seja, depende de 2 valores. para ser verdadeiro, 
 ou um ou outro tem que ser verdadeiro.
